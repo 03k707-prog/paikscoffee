@@ -1,0 +1,15 @@
+=== UPDATE LOG: 2026-07-05 14:16:34.275440 ===
+Source Excel: C:\Users\JO\Desktop\PAIK\data\주문현황_OMS260630539944_20260705.xlsx
+Skipped existing items (already in DB): 16
+Newly added items count: 9
+
+--- Newly Added Items List ---
+ID: P0036 | Name: 빽다방 콜드브루 오리지널 커피원액 (에티오피아 100%) | Spec: 300ML | Unit: EA | Price: 8700 | Tax: 과세
+ID: P0037 | Name: 베지밀A | Spec: 950ML | Unit: EA | Price: 1800 | Tax: 과세
+ID: P0038 | Name: 빽다방 청포도 플라워향 에이드 | Spec: 1.5L(6EA 주문 시, 박스배송) | Unit: EA | Price: 18200 | Tax: 과세
+ID: P0039 | Name: 농축유청단백 코코아 파우더 | Spec: 500G | Unit: EA | Price: 18000 | Tax: 과세
+ID: P0040 | Name: 빽다방 체리파우더 | Spec: 1KG | Unit: EA | Price: 5000 | Tax: 과세
+ID: P0041 | Name: 빽다방 옛날미숫가루 | Spec: 1KG | Unit: EA | Price: 6800 | Tax: 과세
+ID: P0042 | Name: 빽다방 밀크파우더 | Spec: 1KG | Unit: EA | Price: 8200 | Tax: 과세
+ID: P0043 | Name: 크리미단팥빵 | Spec: 120G*12EA | Unit: BOX | Price: 13560 | Tax: 과세
+ID: P0044 | Name: 츄러스쫀득볼 | Spec: 900G | Unit: EA | Price: 10000 | Tax: 과세

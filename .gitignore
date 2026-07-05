@@ -1,0 +1,16 @@
+# MS Office temporary lock files
+~$*
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints
+.venv/
+venv/
+env/
+
+# OS temporary files
+.DS_Store
+Thumbs.db

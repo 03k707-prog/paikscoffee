@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paik's Operations - Gangnam Branch #104</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#6f6100",
+                    "outline-variant": "#cec6ab",
+                    "background": "#f9f9fc",
+                    "tertiary-container": "#3bf3ff",
+                    "surface": "#f9f9fc",
+                    "surface-tint": "#6c5e00",
+                    "inverse-on-surface": "#f0f0f3",
+                    "on-primary-fixed-variant": "#524700",
+                    "tertiary": "#00696f",
+                    "on-tertiary": "#ffffff",
+                    "secondary": "#3d5ba7",
+                    "primary": "#6c5e00",
+                    "primary-fixed-dim": "#e2c600",
+                    "surface-container-highest": "#e2e2e5",
+                    "on-surface-variant": "#4c4732",
+                    "surface-container-low": "#f3f3f6",
+                    "tertiary-fixed-dim": "#00dbe7",
+                    "surface-dim": "#dadadc",
+                    "status-info": "#0288D1",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "border-subtle": "#E0E2E6",
+                    "inverse-surface": "#2f3133",
+                    "secondary-fixed": "#dae1ff",
+                    "on-tertiary-fixed-variant": "#004f54",
+                    "surface-container": "#eeeef0",
+                    "surface-container-lowest": "#ffffff",
+                    "on-background": "#1a1c1e",
+                    "surface-bright": "#f9f9fc",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#211b00",
+                    "surface-variant": "#e2e2e5",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#92aeff",
+                    "on-secondary-fixed": "#001849",
+                    "primary-container": "#fcdd00",
+                    "on-surface": "#1a1c1e",
+                    "status-warning": "#F57C00",
+                    "inverse-primary": "#e2c600",
+                    "on-secondary-fixed-variant": "#22438d",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#73f5ff",
+                    "outline": "#7d775f",
+                    "on-secondary-container": "#1e3f8a",
+                    "on-tertiary-fixed": "#002022",
+                    "surface-background": "#F8F9FA",
+                    "status-success": "#2D8A39",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#006c72",
+                    "secondary-fixed-dim": "#b3c5ff",
+                    "status-error": "#D32F2F",
+                    "surface-container-high": "#e8e8ea",
+                    "primary-fixed": "#ffe33e"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "max-width": "1440px",
+                    "margin-desktop": "24px",
+                    "margin-mobile": "16px",
+                    "gutter": "16px",
+                    "unit": "4px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Inter"],
+                    "headline-sm": ["Montserrat"],
+                    "body-sm": ["Inter"],
+                    "data-mono": ["Inter"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-bold": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-sm": ["18px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "body-sm": ["12px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                    "data-mono": ["14px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #f9f9fc;
+            color: #1a1c1e;
+            -webkit-font-smoothing: antialiased;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #E0E2E6;
+            border-radius: 10px;
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            border: 1px solid #E0E2E6;
+        }
+    </style>
+</head>
+<body class="flex min-h-screen">
+<!-- Predicted SideNavBar -->
+<aside class="h-screen w-64 flex-shrink-0 sticky top-0 left-0 bg-surface-container-lowest dark:bg-inverse-surface border-r border-outline-variant dark:border-outline flex flex-col py-6">
+<div class="px-6 mb-8">
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-primary-fixed mb-1">Paik's Coffee</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Gangnam Branch #104</p>
+</div>
+<nav class="flex-1 px-4 space-y-1 overflow-y-auto custom-scrollbar">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-secondary font-label-bold border-r-4 border-secondary bg-secondary-container/10 transition-transform active:scale-95" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label-bold text-label-bold">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+<span class="font-body-md text-body-md">Inventory</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="leaderboard">leaderboard</span>
+<span class="font-body-md text-body-md">Sales Analysis</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="restaurant_menu">restaurant_menu</span>
+<span class="font-body-md text-body-md">Menu Management</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="font-body-md text-body-md">Orders</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high dark:hover:bg-surface-variant transition-colors duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-body-md text-body-md">Staff Settings</span>
+</a>
+</nav>
+<div class="px-4 mt-6">
+<button class="w-full py-3 px-4 bg-primary text-on-primary rounded-xl font-label-bold text-label-bold flex items-center justify-center gap-2 hover:opacity-90 transition-all">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+                New Inventory Order
+            </button>
+</div>
+<div class="mt-auto px-4 pt-6 space-y-1">
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+<span class="font-body-md text-body-md">Support</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-surface-variant font-body-md hover:bg-surface-container-high transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-body-md text-body-md">Settings</span>
+</a>
+<div class="mt-4 px-4 py-3 flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Close up professional portrait of a coffee shop owner in a modern apron, warm and welcoming expression, soft natural lighting in a contemporary coffee shop background, high resolution, corporate lifestyle photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi55CWVNNYg9CDJeqMX01BoF-MNjuhc1clG6ThcfNg_YyZDOsh8WcmFcei6DhvnA3DmJoy054TaV_s_ir2NyR3w4Z493dziFUgWhZt2IemPn4OepLbiVg3jH7TCDYg4voTDUM7rZ8ClFE8LvFjfjGBeBJK1vRdyA1R62rEqdvVpl6y1g940naKVwpxQa1KWLXz0cNXuZkcfAVeAEMEkY4axVFp6yCMqT_O-8NG1Bexl6s4VNUJbqpZcoQSuYDjyQ_U6Ayz9My3DQ"/>
+<div class="overflow-hidden">
+<p class="font-label-bold text-label-bold truncate">Manager Paik</p>
+<p class="text-[10px] text-on-surface-variant uppercase tracking-wider">Store Owner Profile</p>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Wrapper -->
+<div class="flex-1 flex flex-col min-w-0">
+<!-- Predicted TopAppBar -->
+<header class="h-16 w-full sticky top-0 z-40 bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center px-6">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-black text-secondary">Paik's Operations</span>
+<div class="flex gap-6">
+<a class="text-secondary border-b-2 border-secondary pb-1 font-label-bold text-label-bold" href="#">Overview</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold text-label-bold" href="#">Daily Logs</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold text-label-bold" href="#">Reports</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-2">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all opacity-80 active:opacity-60">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-all opacity-80 active:opacity-60">
+<span class="material-symbols-outlined" data-icon="history">history</span>
+</button>
+</div>
+<div class="h-8 w-[1px] bg-outline-variant mx-2"></div>
+<button class="px-4 py-2 text-secondary font-label-bold text-label-bold hover:bg-surface-container-high rounded-lg transition-all">Export Data</button>
+<button class="px-5 py-2 bg-secondary text-on-secondary font-label-bold text-label-bold rounded-lg shadow-sm hover:opacity-90 active:opacity-80 transition-all">End Shift</button>
+</div>
+</header>
+<!-- Page Content -->
+<main class="p-6 overflow-y-auto">
+<!-- Header Section -->
+<div class="flex justify-between items-end mb-8">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-1">Store Overview</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Real-time performance tracking for Gangnam Branch #104</p>
+</div>
+<div class="flex items-center gap-3 bg-white border border-border-subtle p-2 rounded-xl shadow-sm">
+<button class="p-1 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span></button>
+<span class="font-label-bold text-label-bold px-4">October 24, 2023</span>
+<button class="p-1 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined" data-icon="calendar_month">calendar_month</span></button>
+<button class="p-1 hover:bg-surface-container-low rounded"><span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+<div class="flex flex-col lg:flex-row gap-6">
+<!-- Dashboard Main Content -->
+<div class="flex-1 space-y-6">
+<!-- KPI Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<div class="bg-white p-5 rounded-xl border border-border-subtle shadow-sm hover:border-primary transition-colors cursor-default">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+</div>
+<span class="text-status-success font-label-bold text-label-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="trending_up">trending_up</span>
+                                    +12%
+                                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Today's Total Sales</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">1,250,000 KRW</h3>
+</div>
+<div class="bg-white p-5 rounded-xl border border-border-subtle shadow-sm hover:border-secondary transition-colors cursor-default">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container/20 rounded-lg text-secondary">
+<span class="material-symbols-outlined" data-icon="pending_actions">pending_actions</span>
+</div>
+<span class="bg-secondary-container/30 text-on-secondary-container px-2 py-0.5 rounded text-[10px] font-bold uppercase">In Progress</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Active Orders</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">12</h3>
+</div>
+<div class="bg-white p-5 rounded-xl border border-border-subtle shadow-sm hover:border-status-error transition-colors cursor-default">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-error-container/20 rounded-lg text-error">
+<span class="material-symbols-outlined" data-icon="inventory">inventory</span>
+</div>
+<span class="text-status-error font-label-bold text-label-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="warning">warning</span>
+                                    Urgent
+                                </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Low Stock Items</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">3</h3>
+</div>
+<div class="bg-white p-5 rounded-xl border border-border-subtle shadow-sm hover:border-tertiary transition-colors cursor-default">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-tertiary-container/10 rounded-lg text-tertiary">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+</div>
+<span class="text-on-surface-variant font-label-bold text-label-bold">Target: 5.5k</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Average Ticket</p>
+<h3 class="font-headline-md text-headline-md text-on-surface">5,160 KRW</h3>
+</div>
+</div>
+<!-- Middle Row -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6">
+<!-- Sales Chart Visualization -->
+<div class="xl:col-span-2 bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+<div class="flex justify-between items-center mb-6">
+<h4 class="font-headline-sm text-headline-sm">Daily Sales Trend</h4>
+<div class="flex gap-2">
+<button class="px-3 py-1 bg-surface-container-high rounded-full text-label-bold">Hourly</button>
+<button class="px-3 py-1 text-label-bold text-on-surface-variant">Shift</button>
+</div>
+</div>
+<!-- Mockup Chart Placeholder -->
+<div class="h-64 w-full relative flex items-end gap-2 group">
+<div class="flex-1 bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 h-[40%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">08:00</div>
+</div>
+<div class="flex-1 bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 h-[60%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">10:00</div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg transition-all hover:bg-primary/40 h-[85%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">12:00</div>
+</div>
+<div class="flex-1 bg-primary/80 rounded-t-lg transition-all hover:bg-primary/100 h-[100%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">14:00</div>
+</div>
+<div class="flex-1 bg-primary/20 rounded-t-lg transition-all hover:bg-primary/40 h-[70%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">16:00</div>
+</div>
+<div class="flex-1 bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 h-[50%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">18:00</div>
+</div>
+<div class="flex-1 bg-surface-container-high rounded-t-lg transition-all hover:bg-primary/40 h-[30%] relative group">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-on-surface text-white text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">20:00</div>
+</div>
+<div class="absolute bottom-0 left-0 w-full h-[1px] bg-outline-variant"></div>
+</div>
+<div class="mt-4 flex justify-between text-[10px] text-on-surface-variant font-label-bold px-2">
+<span>08:00 AM</span>
+<span>12:00 PM</span>
+<span>04:00 PM</span>
+<span>08:00 PM</span>
+</div>
+</div>
+<!-- Top Selling Menu -->
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm flex flex-col">
+<h4 class="font-headline-sm text-headline-sm mb-6">Top Selling Menu</h4>
+<div class="space-y-4 flex-1">
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-lg object-cover" data-alt="Close up gourmet photograph of Paik's Coffee signature iced original coffee in a tall clear cup, condensation on the side, rich dark coffee color, clean studio lighting, minimalist beige background, high-end food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC7IkjDlnKE0CS34Ws9eoZqJTdso5rXF5cJ4dRYBXC5drumUMB59_jEwzFSDcdAJnmsVDz7pYgLkPzD5ridmyWxLQR8JU5Au_i9J581QtKxHCwUOxbZE55GJ8YKUlBiWn7JV4VnRllxolafLZvFbrooUAdhMU6N1NI-Sqy7Sfa8hL_tISFzoto5xpLeRP39R5KpGt6TcprqPKfNYEKsvMQVszR8V6UNBCm4p7TsImPU8Nq4prRfAzVHDgRnSLhLYoRnKGXERvbdw"/>
+<span class="absolute -top-2 -left-2 w-6 h-6 bg-primary text-on-primary rounded-full flex items-center justify-center text-[10px] font-bold">1</span>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">Paik's Original Coffee</p>
+<p class="text-[10px] text-on-surface-variant">428 cups today</p>
+</div>
+<span class="text-status-success font-bold text-[12px]">+5%</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-lg object-cover" data-alt="Vibrant photograph of a Strawberry Banana smoothie in a large transparent cup, layers of creamy yellow and bright pink, garnished with a fresh strawberry slice, bright and cheerful lighting, clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPohYY3JgyU-Ufv3UjQzQrXz6rAzHZJvRLtTz95-5Jvt3N-zJQaV-XdLBni8j5BddHXsw8sWBN-RpwHrXHwpVcy_nZBVNnN2gJrHoFED12rLrlYsPM56RyxzDNdVVnCgymOksPQoPJ1uiiLae9mxxGIz_nfkgjYhPjMs-BTJsfTBJu_nuSAdXS5qhOX140WJ6YL0ooL4474QWU2tyOG4ck9_S06BZYliBhXbRsJUqCmdzkDJQoq67iAioWiXGeVn4_ziQ0Jq8lA"/>
+<span class="absolute -top-2 -left-2 w-6 h-6 bg-surface-container-highest text-on-surface rounded-full flex items-center justify-center text-[10px] font-bold border border-outline-variant">2</span>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">Strawberry Banana</p>
+<p class="text-[10px] text-on-surface-variant">312 cups today</p>
+</div>
+<span class="text-status-warning font-bold text-[12px]">-2%</span>
+</div>
+<div class="flex items-center gap-4 group cursor-pointer">
+<div class="relative">
+<img class="w-12 h-12 rounded-lg object-cover" data-alt="Appetizing Korean style Sarada Bread sandwich, toasted bread filled with creamy potato salad and vegetables, rustic and warm lighting, professional food styling on a minimalist plate, high quality food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGd51V1tgQuoyRwyK-vUZIRWFJUuEIBoMC-omfuzHOX5i3Z7h_H3HJgHI44b4tBMMV7SL2qeYlnQZUphcUcbf3qltXfwXxGdt_0t9pJP9sfyFHvhnvNtj69dzkftV8FiY0QYN5BdBwwFV1OzJGOLNPJ3M0ztNvZSX7eNlc0T5WTV8PxJcCRCFMjKpYOb6YSTYWk1b_1ElKGjsLbCc74XWfx8QmTYjom_j9sWhYrsxrRxngO3E_3y9SzwKY5Id4wE1PMwnH76bAaQ"/>
+<span class="absolute -top-2 -left-2 w-6 h-6 bg-surface-container-highest text-on-surface rounded-full flex items-center justify-center text-[10px] font-bold border border-outline-variant">3</span>
+</div>
+<div class="flex-1">
+<p class="font-label-bold text-label-bold">Sarada Bread</p>
+<p class="text-[10px] text-on-surface-variant">156 units today</p>
+</div>
+<span class="text-status-success font-bold text-[12px]">+12%</span>
+</div>
+</div>
+<button class="mt-6 w-full py-2 text-secondary font-label-bold text-label-bold hover:bg-secondary/5 border border-secondary/20 rounded-lg transition-colors">View All Menu Analysis</button>
+</div>
+</div>
+<!-- Bottom Row: Inventory & Recipe Table -->
+<div class="bg-white rounded-xl border border-border-subtle shadow-sm overflow-hidden">
+<div class="px-6 py-4 border-b border-border-subtle flex justify-between items-center">
+<h4 class="font-headline-sm text-headline-sm">Inventory &amp; Recipe Status</h4>
+<div class="flex items-center gap-2">
+<span class="bg-error-container/20 text-error px-2 py-1 rounded text-[10px] font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]" data-icon="priority_high">priority_high</span> 3 Low Stock
+                                </span>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead class="bg-[#F1F3F5]">
+<tr>
+<th class="px-6 py-3 font-label-bold text-label-bold text-on-surface-variant">Item Name</th>
+<th class="px-6 py-3 font-label-bold text-label-bold text-on-surface-variant">Category</th>
+<th class="px-6 py-3 font-label-bold text-label-bold text-on-surface-variant">Stock Level</th>
+<th class="px-6 py-3 font-label-bold text-label-bold text-on-surface-variant">Status</th>
+<th class="px-6 py-3 font-label-bold text-label-bold text-on-surface-variant">Linked Recipe</th>
+<th class="px-6 py-3"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-subtle">
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-body-md text-body-md font-semibold">Roasted Coffee Beans (Bulk)</td>
+<td class="px-6 py-4 font-body-md text-body-md">Coffee</td>
+<td class="px-6 py-4">
+<div class="w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-status-success h-full w-[85%]"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">85kg / 100kg</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-status-success/10 text-status-success rounded-full text-[10px] font-bold">Safe</span>
+</td>
+<td class="px-6 py-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-body-md text-body-md font-semibold">Whole Milk (Carton)</td>
+<td class="px-6 py-4 font-body-md text-body-md">Dairy</td>
+<td class="px-6 py-4">
+<div class="w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-status-warning h-full w-[25%]"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">12L / 48L</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-status-warning/10 text-status-warning rounded-full text-[10px] font-bold">Low</span>
+</td>
+<td class="px-6 py-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-body-md text-body-md font-semibold">Strawberry Puree</td>
+<td class="px-6 py-4 font-body-md text-body-md">Fruit</td>
+<td class="px-6 py-4">
+<div class="w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-status-error h-full w-[8%]"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">1.5kg / 20kg</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-status-error/10 text-status-error rounded-full text-[10px] font-bold">Critical</span>
+</td>
+<td class="px-6 py-4">
+<span class="material-symbols-outlined text-secondary" data-icon="check_circle">check_circle</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="px-6 py-4 font-body-md text-body-md font-semibold">Take-out Paper Cups (Large)</td>
+<td class="px-6 py-4 font-body-md text-body-md">Consumables</td>
+<td class="px-6 py-4">
+<div class="w-32 h-2 bg-surface-container-high rounded-full overflow-hidden">
+<div class="bg-status-success h-full w-[60%]"></div>
+</div>
+<p class="text-[10px] mt-1 text-on-surface-variant">1,200 / 2,000</p>
+</td>
+<td class="px-6 py-4">
+<span class="px-3 py-1 bg-status-success/10 text-status-success rounded-full text-[10px] font-bold">Safe</span>
+</td>
+<td class="px-6 py-4">
+<span class="material-symbols-outlined text-outline" data-icon="cancel">cancel</span>
+</td>
+<td class="px-6 py-4 text-right">
+<button class="p-1 hover:bg-surface-container-high rounded"><span class="material-symbols-outlined text-on-surface-variant" data-icon="more_vert">more_vert</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-6 py-3 bg-surface-container-low border-t border-border-subtle flex justify-between items-center">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Showing 1-4 of 124 items</span>
+<div class="flex gap-1">
+<button class="p-1 hover:bg-white rounded"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_left">chevron_left</span></button>
+<button class="p-1 hover:bg-white rounded font-label-bold text-[12px] px-2 bg-white shadow-sm">1</button>
+<button class="p-1 hover:bg-white rounded font-label-bold text-[12px] px-2">2</button>
+<button class="p-1 hover:bg-white rounded font-label-bold text-[12px] px-2">3</button>
+<button class="p-1 hover:bg-white rounded"><span class="material-symbols-outlined text-[18px]" data-icon="chevron_right">chevron_right</span></button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Sidebar Widgets -->
+<aside class="w-full lg:w-80 space-y-6">
+<!-- Weather Impact Card -->
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm overflow-hidden relative group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-12 translate-x-12 blur-2xl"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-status-warning text-3xl" data-icon="sunny">sunny</span>
+<div>
+<p class="font-headline-sm text-headline-sm">Sunny</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gangnam-gu, 24°C</p>
+</div>
+</div>
+</div>
+<div class="bg-primary-container/20 p-4 rounded-lg border border-primary/10">
+<p class="font-body-md text-body-md font-semibold text-primary mb-1">Impact Analysis</p>
+<div class="flex items-end gap-2">
+<span class="font-headline-md text-headline-md text-on-primary-container">18%</span>
+<span class="font-body-sm text-body-sm text-on-primary-container mb-1">higher sales expected</span>
+</div>
+<p class="text-[11px] text-on-surface-variant mt-2 italic leading-relaxed">
+                                    Ice coffee and fruit smoothie categories show positive correlation with current weather conditions.
+                                </p>
+</div>
+</div>
+</div>
+<!-- HQ Notifications -->
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+<div class="flex items-center justify-between mb-6">
+<h4 class="font-headline-sm text-headline-sm">HQ Notifications</h4>
+<span class="w-2 h-2 bg-error rounded-full"></span>
+</div>
+<div class="space-y-4">
+<div class="p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-all cursor-pointer border-l-4 border-secondary">
+<p class="font-label-bold text-label-bold text-secondary mb-1">New Seasonal Campaign</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Winter promotion materials arriving October 28. Review manual.</p>
+<p class="text-[10px] text-on-surface-variant mt-2">2 hours ago</p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-all cursor-pointer">
+<p class="font-label-bold text-label-bold text-on-surface mb-1">Supply Chain Update</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Bean logistics delayed by 4h due to port congestion. Stock safe.</p>
+<p class="text-[10px] text-on-surface-variant mt-2">Yesterday</p>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-all cursor-pointer">
+<p class="font-label-bold text-label-bold text-on-surface mb-1">Quality Audit Scheduled</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Quarterly branch audit window: Nov 1 - Nov 7. Prepare logs.</p>
+<p class="text-[10px] text-on-surface-variant mt-2">Oct 22</p>
+</div>
+</div>
+<button class="mt-6 w-full py-2 font-label-bold text-label-bold text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center gap-2">
+                            Show All Notifications
+                            <span class="material-symbols-outlined text-[16px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Shift Progress -->
+<div class="bg-white p-6 rounded-xl border border-border-subtle shadow-sm">
+<h4 class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest mb-4">Current Shift</h4>
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-12 rounded-full border-4 border-secondary border-t-transparent animate-spin-slow flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary" data-icon="timer">timer</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm">06:42:15</p>
+<p class="font-body-sm text-body-sm text-status-success">65% Target Achieved</p>
+</div>
+</div>
+<div class="w-full h-2 bg-surface-container-high rounded-full">
+<div class="h-full bg-secondary rounded-full" style="width: 65%;"></div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+<!-- Micro-interaction Scripts -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Handle active nav state mapping (redundant as hardcoded above but good for dynamic)
+            const navLinks = document.querySelectorAll('aside nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    navLinks.forEach(l => {
+                        l.classList.remove('text-secondary', 'font-label-bold', 'border-r-4', 'border-secondary', 'bg-secondary-container/10');
+                        l.classList.add('text-on-surface-variant', 'font-body-md');
+                    });
+                    link.classList.add('text-secondary', 'font-label-bold', 'border-r-4', 'border-secondary', 'bg-secondary-container/10');
+                    link.classList.remove('text-on-surface-variant', 'font-body-md');
+                });
+            });
+
+            // Tab highlighting logic for Top Bar
+            const topLinks = document.querySelectorAll('header a');
+            topLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    topLinks.forEach(l => {
+                        l.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                        l.classList.add('text-on-surface-variant');
+                    });
+                    link.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                    link.classList.remove('text-on-surface-variant');
+                });
+            });
+        });
+    </script>
+</body></html>

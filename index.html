@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>광희's 빽다방 - 통합 매장 관리 시스템</title>
+    <!-- Montserrat & Inter & Noto Sans Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet"/>
+    <!-- Material Symbols Outlined Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    
+    <!-- Custom Style Sheet -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside>
+        <div class="logo-container">
+            <h1 class="logo-title">광희's <span class="highlight">빽다방</span></h1>
+            <p class="logo-sub">GANGNAM NO. 104</p>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <a class="nav-item active" href="#">
+                <span class="material-symbols-outlined nav-icon">dashboard</span>
+                <span>대시보드</span>
+            </a>
+            <a class="nav-item" href="#inventory-section">
+                <span class="material-symbols-outlined nav-icon">inventory_2</span>
+                <span>Inventory (재고)</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined nav-icon">leaderboard</span>
+                <span>매출 분석</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined nav-icon">restaurant_menu</span>
+                <span>레시피 관리</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined nav-icon">shopping_cart</span>
+                <span>발주 내역</span>
+            </a>
+            <a class="nav-item" href="#">
+                <span class="material-symbols-outlined nav-icon">group</span>
+                <span>직원 관리</span>
+            </a>
+        </nav>
+        
+        <div class="sidebar-action">
+            <button class="btn-order">
+                <span class="material-symbols-outlined">add_circle</span>
+                원부자재 긴급 발주
+            </button>
+        </div>
+        
+        <div class="sidebar-profile">
+            <img class="profile-img" alt="Manager Profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi55CWVNNYg9CDJeqMX01BoF-MNjuhc1clG6ThcfNg_YyZDOsh8WcmFcei6DhvnA3DmJoy054TaV_s_ir2NyR3w4Z493dziFUgWhZt2IemPn4OepLbiVg3jH7TCDYg4voTDUM7rZ8ClFE8LvFjfjGBeBJK1vRdyA1R62rEqdvVpl6y1g940naKVwpxQa1KWLXz0cNXuZkcfAVeAEMEkY4axVFp6yCMqT_O-8NG1Bexl6s4VNUJbqpZcoQSuYDjyQ_U6Ayz9My3DQ"/>
+            <div class="profile-info">
+                <p class="profile-name">점주 황광희</p>
+                <p class="profile-role">Store Manager</p>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Wrapper -->
+    <main>
+        
+        <!-- Top App Bar -->
+        <header>
+            <div class="header-left">
+                <span class="header-title">빽다방 통합 매장관리</span>
+                <div class="header-tabs">
+                    <a class="header-tab-link active" href="#">대시보드</a>
+                    <a class="header-tab-link" href="#">실시간 판매현황</a>
+                    <a class="header-tab-link" href="#">재고보고서</a>
+                </div>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon">
+                    <span class="material-symbols-outlined">notifications</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-symbols-outlined">history</span>
+                </button>
+                <div class="divider-v"></div>
+                <button class="btn-export">엑셀 다운로드</button>
+                <button class="btn-shift">영업 마감 (결산)</button>
+            </div>
+        </header>
+
+        <!-- Page Content -->
+        <div class="page-body">
+            
+            <!-- Page Header -->
+            <div class="page-header">
+                <div>
+                    <h2 class="page-title">매장 종합 대시보드</h2>
+                    <p class="page-sub">광희's 빽다방 강남104호점의 실시간 데이터 분석 및 재고 현황입니다.</p>
+                </div>
+                <div class="calendar-widget">
+                    <button class="btn-icon" style="width:24px; height:24px;"><span class="material-symbols-outlined">chevron_left</span></button>
+                    <span>2026년 7월 5일 (일)</span>
+                    <button class="btn-icon" style="width:24px; height:24px;"><span class="material-symbols-outlined">calendar_month</span></button>
+                    <button class="btn-icon" style="width:24px; height:24px;"><span class="material-symbols-outlined">chevron_right</span></button>
+                </div>
+            </div>
+
+            <!-- Dashboard Grid Layout -->
+            <div class="dashboard-grid">
+                
+                <!-- Left Column (KPI, Charts, Inventory Table) -->
+                <div class="main-column">
+                    
+                    <!-- KPI Cards Row -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card success">
+                            <div class="kpi-header">
+                                <div class="kpi-icon">
+                                    <span class="material-symbols-outlined">payments</span>
+                                </div>
+                                <span class="kpi-badge trend-up">+12%</span>
+                            </div>
+                            <p class="kpi-title">오늘의 총 매출액</p>
+                            <h3 class="kpi-value" id="kpi-sales">1,250,000 KRW</h3>
+                        </div>
+                        
+                        <div class="kpi-card secondary">
+                            <div class="kpi-header">
+                                <div class="kpi-icon">
+                                    <span class="material-symbols-outlined">pending_actions</span>
+                                </div>
+                                <span class="kpi-badge info">진행중</span>
+                            </div>
+                            <p class="kpi-title">누적 판매 건수</p>
+                            <h3 class="kpi-value" id="kpi-orders">12</h3>
+                        </div>
+                        
+                        <div class="kpi-card error">
+                            <div class="kpi-header">
+                                <div class="kpi-icon">
+                                    <span class="material-symbols-outlined">inventory</span>
+                                </div>
+                                <span class="kpi-badge trend-down">Urgent</span>
+                            </div>
+                            <p class="kpi-title">재고 부족 품목</p>
+                            <h3 class="kpi-value" id="kpi-low-stock">0개</h3>
+                        </div>
+                        
+                        <div class="kpi-card primary">
+                            <div class="kpi-header">
+                                <div class="kpi-icon">
+                                    <span class="material-symbols-outlined">receipt_long</span>
+                                </div>
+                                <span class="kpi-badge info">목표: 5.5K</span>
+                            </div>
+                            <p class="kpi-title">평균 객단가</p>
+                            <h3 class="kpi-value">5,160 KRW</h3>
+                        </div>
+                    </div>
+
+                    <!-- Charts Row -->
+                    <div class="kpi-grid" style="grid-template-columns: 2fr 1fr;">
+                        <!-- Sales Chart Bento Card -->
+                        <div class="bento-card">
+                            <div class="bento-card-header">
+                                <h4 class="bento-card-title">시간대별 매출 추이</h4>
+                                <div class="header-tabs" style="gap:8px;">
+                                    <button class="btn-export" style="padding:4px 12px; font-size:11px;">시간별</button>
+                                    <button class="btn-export" style="padding:4px 12px; font-size:11px; border:none;">근무교대별</button>
+                                </div>
+                            </div>
+                            
+                            <div class="chart-container">
+                                <div class="bar-chart">
+                                    <!-- Grid lines background -->
+                                    <div class="chart-axis-y">
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                        <div class="grid-line"></div>
+                                    </div>
+                                    
+                                    <!-- Bar items -->
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 40%; background-color: var(--primary-light);">
+                                            <span class="bar-tooltip">08:00 (오전 준비)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 60%; background-color: var(--primary-light);">
+                                            <span class="bar-tooltip">10:00 (등교/출근)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 85%; background-color: var(--secondary-light);">
+                                            <span class="bar-tooltip">12:00 (점심 피크)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column active" style="height: 100%;">
+                                            <span class="bar-tooltip">14:00 (현재 시각)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 70%; background-color: var(--primary-light);">
+                                            <span class="bar-tooltip">16:00 (오후 학원)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 50%; background-color: var(--primary-light);">
+                                            <span class="bar-tooltip">18:00 (퇴근길)</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-wrapper">
+                                        <div class="bar-column" style="height: 30%; background-color: var(--primary-light);">
+                                            <span class="bar-tooltip">20:00 (영업 마감)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chart-axis-x">
+                                    <span>08:00</span>
+                                    <span>10:00</span>
+                                    <span>12:00</span>
+                                    <span>14:00</span>
+                                    <span>16:00</span>
+                                    <span>18:00</span>
+                                    <span>20:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Top Selling Menus Bento Card -->
+                        <div class="bento-card">
+                            <h4 class="bento-card-title" style="margin-bottom: 20px;">오늘의 인기 메뉴</h4>
+                            <div class="menu-list">
+                                <div class="menu-item">
+                                    <div class="menu-rank">1</div>
+                                    <img class="menu-img" alt="원조커피" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC7IkjDlnKE0CS34Ws9eoZqJTdso5rXF5cJ4dRYBXC5drumUMB59_jEwzFSDcdAJnmsVDz7pYgLkPzD5ridmyWxLQR8JU5Au_i9J581QtKxHCwUOxbZE55GJ8YKUlBiWn7JV4VnRllxolafLZvFbrooUAdhMU6N1NI-Sqy7Sfa8hL_tISFzoto5xpLeRP39R5KpGt6TcprqPKfNYEKsvMQVszR8V6UNBCm4p7TsImPU8Nq4prRfAzVHDgRnSLhLYoRnKGXERvbdw"/>
+                                    <div class="menu-info">
+                                        <p class="menu-name">원조커피 (ICED)</p>
+                                        <p class="menu-sales">오늘 428잔 판매</p>
+                                    </div>
+                                    <span class="menu-trend up">+5%</span>
+                                </div>
+                                
+                                <div class="menu-item">
+                                    <div class="menu-rank">2</div>
+                                    <img class="menu-img" alt="딸기바나나빽스치노" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCPohYY3JgyU-Ufv3UjQzQrXz6rAzHZJvRLtTz95-5Jvt3N-zJQaV-XdLBni8j5BddHXsw8sWBN-RpwHrXHwpVcy_nZBVNnN2gJrHoFED12rLrlYsPM56RyxzDNdVVnCgymOksPQoPJ1uiiLae9mxxGIz_nfkgjYhPjMs-BTJsfTBJu_nuSAdXS5qhOX140WJ6YL0ooL4474QWU2tyOG4ck9_S06BZYliBhXbRsJUqCmdzkDJQoq67iAioWiXGeVn4_ziQ0Jq8lA"/>
+                                    <div class="menu-info">
+                                        <p class="menu-name">딸기바나나 빽스치노</p>
+                                        <p class="menu-sales">오늘 312잔 판매</p>
+                                    </div>
+                                    <span class="menu-trend down">-2%</span>
+                                </div>
+
+                                <div class="menu-item">
+                                    <div class="menu-rank">3</div>
+                                    <img class="menu-img" alt="사라다빵" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGd51V1tgQuoyRwyK-vUZIRWFJUuEIBoMC-omfuzHOX5i3Z7h_H3HJgHI44b4tBMMV7SL2qeYlnQZUphcUcbf3qltXfwXxGdt_0t9pJP9sfyFHvhnvNtj69dzkftV8FiY0QYN5BdBwwFV1OzJGOLNPJ3M0ztNvZSX7eNlc0T5WTV8PxJcCRCFMjKpYOb6YSTYWk1b_1ElKGjsLbCc74XWfx8QmTYjom_j9sWhYrsxrRxngO3E_3y9SzwKY5Id4wE1PMwnH76bAaQ"/>
+                                    <div class="menu-info">
+                                        <p class="menu-name">사라다빵</p>
+                                        <p class="menu-sales">오늘 156개 판매</p>
+                                    </div>
+                                    <span class="menu-trend up">+12%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inventory Table Section -->
+                    <div class="table-card" id="inventory-section">
+                        <div class="table-header">
+                            <h4 class="table-header-title">원부자재 실시간 재고 대장</h4>
+                            <div class="table-actions">
+                                <div class="search-box">
+                                    <span class="material-symbols-outlined search-icon">search</span>
+                                    <input class="search-input" id="inventory-search" placeholder="품목코드 또는 품목명 검색..." type="text"/>
+                                </div>
+                                <select class="table-select" id="inventory-category-filter">
+                                    <option value="ALL">전체 카테고리</option>
+                                    <option value="원두/커피">원두/커피</option>
+                                    <option value="유제품">유제품</option>
+                                    <option value="시럽/소스">시럽/소스</option>
+                                    <option value="파우더류">파우더류</option>
+                                    <option value="냉동과일">냉동과일</option>
+                                    <option value="일회용품">일회용품</option>
+                                    <option value="기타자재">기타자재</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>품목명</th>
+                                        <th>카테고리</th>
+                                        <th>현재고 / 안전재고</th>
+                                        <th>상태</th>
+                                        <th>과세</th>
+                                        <th style="text-align: right;">단가</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="inventory-table-body">
+                                    <!-- Dynamic items injected here via app.js -->
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="table-footer">
+                            <span class="footer-info">전체 77개 품목 연동 완료</span>
+                            <div class="pagination">
+                                <button class="page-btn"><span class="material-symbols-outlined" style="font-size:18px;">chevron_left</span></button>
+                                <button class="page-btn active">1</button>
+                                <button class="page-btn">2</button>
+                                <button class="page-btn">3</button>
+                                <button class="page-btn"><span class="material-symbols-outlined" style="font-size:18px;">chevron_right</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column (POS Simulator, Weather, HQ Notifications) -->
+                <div class="right-column">
+                    
+                    <!-- POS / Sales Simulator Card -->
+                    <div class="bento-card pos-simulator-card">
+                        <div class="bento-card-header">
+                            <h4 class="bento-card-title" style="color:var(--secondary);">
+                                <span class="material-symbols-outlined">receipt</span>
+                                POS 음료 판매 시뮬레이터
+                            </h4>
+                        </div>
+                        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5;">
+                            음료 판매가 완료되었을 때, 데이터베이스에 등록된 레시피 규칙과 일회용 부자재 매핑을 통해 원부자재 재고가 자동으로 차감되는 시뮬레이터입니다.
+                        </p>
+                        
+                        <div class="simulator-form">
+                            <div class="form-group">
+                                <label for="beverage-select">판매 음료 선택</label>
+                                <select class="form-select" id="beverage-select">
+                                    <!-- Loaded dynamically from data.js -->
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="beverage-qty">판매 잔 수 (수량)</label>
+                                <input class="form-input" id="beverage-qty" min="1" value="1" type="number"/>
+                            </div>
+                            <button class="btn-simulate" id="btn-simulate">
+                                <span class="material-symbols-outlined">sync_alt</span>
+                                판매 등록 (재고 자동 차감)
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Weather Impact Card -->
+                    <div class="bento-card weather-card">
+                        <div class="weather-header">
+                            <div class="weather-info">
+                                <span class="material-symbols-outlined weather-icon-sun">sunny</span>
+                                <div>
+                                    <h4 style="font-size:18px; font-weight:700;">맑음</h4>
+                                    <p style="font-size:12px; opacity:0.8;">서울특별시 강남구, 24°C</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="weather-analysis-box">
+                            <p class="weather-analysis-title">날씨 영향 매출 분석</p>
+                            <div class="flex" style="display:flex; align-items:flex-end; gap:8px;">
+                                <span class="weather-analysis-value">+18%</span>
+                                <span style="font-size:11px; margin-bottom:4px; opacity:0.9;">추가 매출 예상</span>
+                            </div>
+                            <p class="weather-analysis-desc">
+                                현재 맑고 더운 기온으로 인해 '아이스 아메리카노' 및 '빽스치노' 스무디군의 판매량이 급증하는 추세입니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- HQ Notifications -->
+                    <div class="bento-card">
+                        <div class="bento-card-header" style="margin-bottom: 16px;">
+                            <h4 class="bento-card-title">본사 공지사항</h4>
+                            <span class="w-2 h-2" style="width:8px; height:8px; background-color:var(--error); border-radius:50%;"></span>
+                        </div>
+                        <div style="display:flex; flex-direction:column; gap:12px;">
+                            <div style="padding:12px; background-color:#F8FAFC; border-radius:var(--border-radius-md); border-left:4px solid var(--secondary);">
+                                <p style="font-size:12px; font-weight:700; color:var(--secondary); margin-bottom:4px;">겨울 신메뉴 캠페인 안내</p>
+                                <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">겨울 홍보물 포스터 및 신규 소스류가 10월 28일에 입고 예정입니다.</p>
+                                <p style="font-size:9px; color:var(--text-light); margin-top:6px;">2시간 전</p>
+                            </div>
+                            <div style="padding:12px; background-color:#F8FAFC; border-radius:var(--border-radius-md);">
+                                <p style="font-size:12px; font-weight:700; color:var(--text-color); margin-bottom:4px;">원두 물류 지연 안내</p>
+                                <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">항만 적체로 원두 입고가 4시간 지연됩니다. 현재 매장 재고는 안전합니다.</p>
+                                <p style="font-size:9px; color:var(--text-light); margin-top:6px;">어제</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shift Progress -->
+                    <div class="bento-card">
+                        <h4 style="font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">현재 근무 시프트</h4>
+                        <div style="display:flex; align-items:center; gap:16px; margin-bottom:12px;">
+                            <div class="animate-spin-slow" style="width:36px; height:36px; border-radius:50%; border:3px solid var(--secondary); border-top-color:transparent; display:flex; align-items:center; justify-content:center;">
+                                <span class="material-symbols-outlined" style="font-size:16px; color:var(--secondary);">timer</span>
+                            </div>
+                            <div>
+                                <p style="font-size:16px; font-weight:800; font-family:'Montserrat', sans-serif;">06:42:15</p>
+                                <p style="font-size:11px; color:var(--success); font-weight:700;">시프트 판매 목표 65% 달성</p>
+                            </div>
+                        </div>
+                        <div style="width:100%; height:6px; background-color:var(--border-color); border-radius:999px; overflow:hidden;">
+                            <div style="height:100%; width:65%; background-color:var(--secondary); border-radius:999px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<!-- Toast Notification Popup Container -->
+<div class="toast-notif" id="toast-notif">
+    <span class="material-symbols-outlined toast-icon">check_circle</span>
+    <div class="toast-text" id="toast-text">
+        <!-- Injected dynamically on simulation -->
+    </div>
+</div>
+
+<!-- Load scripts in order -->
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
