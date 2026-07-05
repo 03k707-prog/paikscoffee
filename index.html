@@ -41,7 +41,7 @@
                 <span class="material-symbols-outlined nav-icon">inventory_2</span>
                 <span>Inventory (재고)</span>
             </a>
-            <a class="nav-item" href="#">
+            <a class="nav-item" id="nav-sales" href="#">
                 <span class="material-symbols-outlined nav-icon">leaderboard</span>
                 <span>매출 분석</span>
             </a>
@@ -458,6 +458,131 @@
                 </div>
             </div>
 
+            <!-- Sales Analysis View Section (hidden by default) -->
+            <div id="sales-analysis-view" style="display: none; flex-direction: column; gap: 24px; width: 100%;">
+                <div class="page-header" style="margin-bottom: 0;">
+                    <div>
+                        <h2 class="page-title">매출 분석 통계</h2>
+                        <p class="page-sub">매장의 기간별 매출액, 주문량, 유통 채널 점유율 및 카테고리 매출 추이 데이터 분석입니다.</p>
+                    </div>
+                </div>
+                
+                <!-- Sales KPI Cards Grid -->
+                <div class="kpi-grid">
+                    <div class="kpi-card success">
+                        <div class="kpi-header">
+                            <div class="kpi-icon"><span class="material-symbols-outlined">payments</span></div>
+                            <span class="kpi-badge trend-up" id="sales-kpi-dod-pct">+0%</span>
+                        </div>
+                        <p class="kpi-title">오늘(최근 영업일) 매출액</p>
+                        <h3 class="kpi-value" id="sales-kpi-today">0 KRW</h3>
+                    </div>
+                    
+                    <div class="kpi-card secondary">
+                        <div class="kpi-header">
+                            <div class="kpi-icon"><span class="material-symbols-outlined">calendar_month</span></div>
+                            <span class="kpi-badge info" id="sales-kpi-mom-pct">+0%</span>
+                        </div>
+                        <p class="kpi-title">당월(7월) 누적 매출액</p>
+                        <h3 class="kpi-value" id="sales-kpi-month">0 KRW</h3>
+                    </div>
+
+                    <div class="kpi-card primary">
+                        <div class="kpi-header">
+                            <div class="kpi-icon"><span class="material-symbols-outlined">analytics</span></div>
+                            <span class="kpi-badge info">최고 요일</span>
+                        </div>
+                        <p class="kpi-title">최다 매출 발생 요일</p>
+                        <h3 class="kpi-value" id="sales-kpi-best-day">토요일</h3>
+                    </div>
+
+                    <div class="kpi-card error">
+                        <div class="kpi-header">
+                            <div class="kpi-icon"><span class="material-symbols-outlined">share</span></div>
+                            <span class="kpi-badge trend-down" id="sales-kpi-delivery-ratio">0%</span>
+                        </div>
+                        <p class="kpi-title">배달/픽업 매출 점유율</p>
+                        <h3 class="kpi-value" id="sales-kpi-delivery-share">0%</h3>
+                    </div>
+                </div>
+
+                <!-- Sales Charts Rows -->
+                <div class="dashboard-grid">
+                    <!-- Main Chart Area -->
+                    <div class="main-column">
+                        <!-- Daily Sales Trend Bento Card -->
+                        <div class="bento-card">
+                            <div class="bento-card-header">
+                                <h4 class="bento-card-title">일별 매출 추이 (5월 18일 ~ 7월 5일)</h4>
+                            </div>
+                            <div class="chart-container" style="height: 320px;" id="trend-chart-box">
+                                <!-- Dynamic Line/Bar SVG Chart will be injected here -->
+                            </div>
+                        </div>
+
+                        <!-- Category Sales Trend Bento Card -->
+                        <div class="bento-card">
+                            <div class="bento-card-header">
+                                <h4 class="bento-card-title">카테고리별 예상 매출 추이</h4>
+                            </div>
+                            <div class="chart-container" style="height: 280px;" id="category-chart-box">
+                                <!-- Dynamic stacked SVG will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Sidebar Area for Channel Share -->
+                    <div class="right-column">
+                        <!-- Channel Share Bento Card -->
+                        <div class="bento-card" style="height: 100%;">
+                            <div class="bento-card-header">
+                                <h4 class="bento-card-title">매출 채널별 점유율</h4>
+                            </div>
+                            <div class="chart-container" style="height: 240px; display: flex; align-items: center; justify-content: center;" id="channel-chart-box">
+                                <!-- Dynamic Donut SVG Chart will be injected here -->
+                            </div>
+                            <div class="donut-legends" id="donut-legends" style="margin-top: 20px; display: flex; flex-direction: column; gap: 8px;">
+                                <!-- Legend items will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Daily Sales Table Grid -->
+                <div class="table-card">
+                    <div class="table-header">
+                        <h4 class="table-header-title">일별 매출 거래 대장</h4>
+                        <div class="table-actions">
+                            <select class="table-select" id="sales-month-filter">
+                                <option value="ALL">전체 기간</option>
+                                <option value="2026-05">2026년 5월</option>
+                                <option value="2026-06">2026년 6월</option>
+                                <option value="2026-07">2026년 7월</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>영업 일자</th>
+                                    <th style="text-align: right;">총 매출액</th>
+                                    <th style="text-align: right;">홀 매출액</th>
+                                    <th style="text-align: right;">배민 배달</th>
+                                    <th style="text-align: right;">배민 픽업</th>
+                                    <th style="text-align: right;">쿠팡 이츠</th>
+                                    <th style="text-align: center;">전일비 증감</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sales-table-body">
+                                <!-- Dynamic sales entries injected here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </main>
@@ -474,6 +599,7 @@
 
 <!-- Load scripts in order -->
 <script src="data.js"></script>
+<script src="income_data.js"></script>
 <script src="app.js"></script>
 
 </body>
