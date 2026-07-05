@@ -352,8 +352,8 @@ document.addEventListener('DOMContentLoaded', () => {
         // 2) 일별 매출 추이 SVG 차트 렌더링
         renderSalesTrendChart();
 
-        // 3) 카테고리별 예상 매출 추이 SVG 차트 렌더링
-        renderCategoryTrendChart();
+        // 3) 채널별 매출 추이 SVG 차트 렌더링
+        renderChannelTrendChart();
 
         // 4) 채널별 점유율 도넛 차트 렌더링
         renderChannelDonutChart();
@@ -524,13 +524,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', handleOutsideClick);
     }
 
-    // 카테고리별 예상 매출 추이 차트 렌더링 (SVG)
-    function renderCategoryTrendChart() {
-        const box = document.getElementById('category-chart-box');
+    // 채널별 매출 추이 차트 렌더링 (SVG + 세로선 호버 인터랙션)
+    function renderChannelTrendChart() {
+        const box = document.getElementById('channel-trend-chart-box');
         if (!box) return;
 
         const data = INCOME_DAILY_RECORDS;
-        const maxVal = Math.max(...data.map(r => Math.max(r.categories.coffee, r.categories.smoothie, r.categories.non_coffee, r.categories.bakery)));
+        
+        // 홀매출, 배민배달, 배민픽업, 쿠팡이츠 4개 채널의 개별선으로 시각화
+        const maxVal = Math.max(...data.map(r => Math.max(r.hall_sales, r.baemin_delivery, r.baemin_pickup, r.coupang_eats)));
 
         const width = box.clientWidth || 800;
         const height = 240;
@@ -557,29 +559,38 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         }
 
-        // 카테고리별 키와 색상 정의
-        const cats = [
-            { key: "coffee", class: "coffee", label: "원두/커피", color: "#3b82f6" },
-            { key: "smoothie", class: "smoothie", label: "스무디/빽스치노", color: "#ec4899" },
-            { key: "non_coffee", class: "noncoffee", label: "에이드/기타음료", color: "#10b981" },
-            { key: "bakery", class: "bakery", label: "베이커리/디저트", color: "#f59e0b" }
+        // 세로 가이드 라인 (숨김 상태로 생성)
+        svgContent += `
+            <line id="channel-guide-line" x1="0" y1="${padTop}" x2="0" y2="${padTop + graphH}" 
+                  stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="3 3" style="display: none; pointer-events: none;"></line>
+        `;
+
+        // 채널별 키와 색상 정의
+        const channels = [
+            { key: "hall_sales", class: "hall", label: "홀 매출", color: "#FCDA00" },
+            { key: "baemin_delivery", class: "bmdel", label: "배민 배달", color: "#2ac1bc" },
+            { key: "baemin_pickup", class: "bmpic", label: "배민 픽업", color: "#6be0dc" },
+            { key: "coupang_eats", class: "cpeats", label: "쿠팡이츠", color: "#ffaa00" }
         ];
 
-        cats.forEach(cat => {
+        // 4개 라인 패스 그리기
+        channels.forEach(ch => {
             let linePoints = "";
             let areaPoints = `${getX(0)},${getY(0)} `;
             
             data.forEach((r, idx) => {
                 const x = getX(idx);
-                const val = r.categories[cat.key];
+                const val = r[ch.key];
                 const y = getY(val);
                 linePoints += `${x},${y} `;
                 areaPoints += `${x},${y} `;
             });
             areaPoints += `${getX(data.length - 1)},${getY(0)}`;
 
-            svgContent += `<polygon class="chart-area chart-area-${cat.class}" points="${areaPoints}"></polygon>`;
-            svgContent += `<polyline class="chart-line chart-line-${cat.class}" points="${linePoints}"></polyline>`;
+            // 면적 색칠 (채널별로 fill 색상 투명도 다르게 처리)
+            svgContent += `<polygon class="chart-area" points="${areaPoints}" style="fill: ${ch.color}; opacity: 0.03;"></polygon>`;
+            // 꺾은선 그리기
+            svgContent += `<polyline class="chart-line" points="${linePoints}" style="stroke: ${ch.color}; stroke-width: 2.2;"></polyline>`;
         });
 
         // X축 라벨
@@ -594,8 +605,83 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
+        // 호버 인식을 위한 세로 투명 컬럼 영역들 주입
+        data.forEach((r, idx) => {
+            const x = getX(idx);
+            const w = idx === 0 || idx === data.length - 1 ? graphW / (data.length - 1) / 2 : graphW / (data.length - 1);
+            const rx = idx === 0 ? x : x - w/2;
+            
+            svgContent += `
+                <rect class="channel-hover-zone" x="${rx}" y="${padTop}" width="${w}" height="${graphH}" fill="transparent" style="cursor: pointer;"
+                      data-index="${idx}">
+                </rect>
+            `;
+        });
+
         svgContent += `</svg>`;
-        box.innerHTML = svgContent;
+        
+        // 동적 채널 툴팁 HTML 구조 주입 (innerHTML 덮어쓰기 삭제 현상 방지)
+        const tooltipHtml = `
+            <div id="channel-floating-tooltip" style="position: absolute; display: none; background: rgba(15, 23, 42, 0.95); color: #ffffff; padding: 12px 16px; border-radius: 8px; box-shadow: var(--shadow-lg); z-index: 1000; font-size: 11px; border: 1px solid rgba(255, 255, 255, 0.15); pointer-events: none; backdrop-filter: blur(4px); min-width: 180px;">
+                <div id="channel-floating-date" style="font-weight: 800; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 6px; color: var(--primary);"></div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="display: flex; justify-content: space-between; font-weight: 700; color: #fff;"><span>일 총매출:</span><span id="channel-floating-total">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; color: #fff;"><span>ㄴ 홀 매출:</span><span id="channel-floating-hall" style="font-weight:700; color:#FCDA00;">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; color: #fff;"><span>ㄴ 배민 배달:</span><span id="channel-floating-bmd" style="font-weight:700; color:#2ac1bc;">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; color: #fff;"><span>ㄴ 배민 픽업:</span><span id="channel-floating-bmp" style="font-weight:700; color:#6be0dc;">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; color: #fff;"><span>ㄴ 쿠팡이츠:</span><span id="channel-floating-cpe" style="font-weight:700; color:#ffaa00;">0원</span></div>
+                </div>
+            </div>
+        `;
+        
+        box.innerHTML = svgContent + tooltipHtml;
+
+        // 세로선 호버 인터랙션 이벤트 바인딩
+        const hoverZones = box.querySelectorAll('.channel-hover-zone');
+        const guideLine = box.querySelector('#channel-guide-line');
+        const tooltip = box.querySelector('#channel-floating-tooltip');
+
+        hoverZones.forEach(zone => {
+            zone.addEventListener('mousemove', (e) => {
+                const idx = parseInt(zone.getAttribute('data-index'));
+                const r = data[idx];
+                const x = getX(idx);
+                
+                // 세로 가이드선 위치 조정 및 노출
+                guideLine.setAttribute('x1', x);
+                guideLine.setAttribute('x2', x);
+                guideLine.style.display = 'block';
+                
+                // 팝업 내용 주입
+                document.getElementById('channel-floating-date').textContent = r.date;
+                document.getElementById('channel-floating-total').textContent = r.total_sales.toLocaleString() + '원';
+                document.getElementById('channel-floating-hall').textContent = r.hall_sales.toLocaleString() + '원';
+                document.getElementById('channel-floating-bmd').textContent = r.baemin_delivery.toLocaleString() + '원';
+                document.getElementById('channel-floating-bmp').textContent = r.baemin_pickup.toLocaleString() + '원';
+                document.getElementById('channel-floating-cpe').textContent = r.coupang_eats.toLocaleString() + '원';
+                
+                // 팝업 가로 오버플로우 방지 배치
+                const tooltipWidth = 180;
+                let leftPos = x + 15;
+                if (x + tooltipWidth > box.clientWidth) {
+                    leftPos = x - tooltipWidth - 15;
+                }
+                
+                // 마우스 Y 높이에 맞춰 팝업 위치 결정 (경계 제한)
+                const rect = box.getBoundingClientRect();
+                const mouseY = e.clientY - rect.top;
+                
+                tooltip.style.left = leftPos + 'px';
+                tooltip.style.top = Math.max(padTop, Math.min(mouseY - 60, padTop + graphH - 120)) + 'px';
+                tooltip.style.display = 'block';
+            });
+            
+            zone.addEventListener('mouseleave', () => {
+                // 숨김 처리
+                guideLine.style.display = 'none';
+                tooltip.style.display = 'none';
+            });
+        });
     }
 
     // 채널 점유율 도넛 차트 (SVG)
