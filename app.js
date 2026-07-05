@@ -192,18 +192,62 @@ document.addEventListener('DOMContentLoaded', () => {
 
     btnSimulate.addEventListener('click', handleSalesSimulation);
 
+    // 8.5 탭(대시보드 vs 레시피 관리) 전환 로직
+    const navDashboard = document.getElementById('nav-dashboard');
+    const navRecipes = document.getElementById('nav-recipes');
+    const dashboardView = document.getElementById('dashboard-view');
+    const recipeView = document.getElementById('recipe-view');
+
+    function switchView(viewName) {
+        // 모든 nav-item에서 active 제거
+        document.querySelectorAll('.sidebar-nav .nav-item').forEach(item => {
+            item.classList.remove('active');
+        });
+
+        if (viewName === 'dashboard') {
+            dashboardView.style.display = 'flex';
+            recipeView.style.display = 'none';
+            if (navDashboard) navDashboard.classList.add('active');
+        } else if (viewName === 'recipes') {
+            dashboardView.style.display = 'none';
+            recipeView.style.display = 'flex';
+            if (navRecipes) navRecipes.classList.add('active');
+        }
+    }
+
+    if (navDashboard) {
+        navDashboard.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchView('dashboard');
+        });
+    }
+
+    if (navRecipes) {
+        navRecipes.addEventListener('click', (e) => {
+            e.preventDefault();
+            switchView('recipes');
+        });
+    }
+
     // 사이드바 카테고리 링크 클릭 시 테이블 자동 필터링 매핑
     const navLinks = document.querySelectorAll('.sidebar-nav a');
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            // 사이드바 클릭 링크가 Inventory인 경우
             const text = link.querySelector('span:not(.nav-icon)').textContent.trim();
-            if (text === 'Inventory') {
+            if (text === 'Inventory (재고)') {
                 e.preventDefault();
+                
+                // 만약 레시피 뷰가 열려있다면 대시보드로 복귀 후 스크롤
+                switchView('dashboard');
+                
                 categorySelect.value = 'ALL';
                 renderInventoryTable('', 'ALL');
+                
                 // 스크롤 이동
-                document.getElementById('inventory-section').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => {
+                    const invSection = document.getElementById('inventory-section');
+                    if (invSection) invSection.scrollIntoView({ behavior: 'smooth' });
+                }, 100);
             }
         });
     });

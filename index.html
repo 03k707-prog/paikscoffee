@@ -33,7 +33,7 @@
         </div>
         
         <nav class="sidebar-nav">
-            <a class="nav-item active" href="#">
+            <a class="nav-item active" id="nav-dashboard" href="#">
                 <span class="material-symbols-outlined nav-icon">dashboard</span>
                 <span>대시보드</span>
             </a>
@@ -45,7 +45,7 @@
                 <span class="material-symbols-outlined nav-icon">leaderboard</span>
                 <span>매출 분석</span>
             </a>
-            <a class="nav-item" href="#">
+            <a class="nav-item" id="nav-recipes" href="#">
                 <span class="material-symbols-outlined nav-icon">restaurant_menu</span>
                 <span>레시피 관리</span>
             </a>
@@ -108,7 +108,10 @@
         <!-- Page Content -->
         <div class="page-body">
             
-            <!-- Page Header -->
+            <!-- Dashboard View Section -->
+            <div id="dashboard-view" style="display: flex; flex-direction: column; gap: 24px; width: 100%;">
+                
+                <!-- Page Header -->
             <div class="page-header">
                 <div>
                     <h2 class="page-title">매장 종합 대시보드</h2>
@@ -433,6 +436,26 @@
 
                 </div>
 
+            </div>
+            
+            </div> <!-- End of #dashboard-view -->
+
+            <!-- Recipe View Section (hidden by default) -->
+            <div id="recipe-view" style="display: none; flex-direction: column; gap: 20px; height: 100%;">
+                <div class="page-header" style="margin-bottom: 0;">
+                    <div>
+                        <h2 class="page-title">레시피 매뉴얼 관리</h2>
+                        <p class="page-sub">빽다방 공식 표준 레시피 가이드 및 재고 소모 계산 매뉴얼입니다.</p>
+                    </div>
+                </div>
+                
+                <div class="bento-card" style="flex: 1; min-height: 700px; padding: 12px; display: flex; flex-direction: column;">
+                    <iframe src="recipe/%EA%B8%B0%EC%A1%B4_%EB%B9%B1(%EC%83%81%EC%8B%9C)%20%EC%B5%9C%EC%A2%85%20%EB%A0%88%EC%8B%9C%ED%94%BC_2026.06%20%EC%B5%B5%EB%B9%99%EC%88%98%203%EC%A2%85_%20%EC%B6%94%EA%B0%80%EC%98%B5%EC%85%98%EC%B0%BD%20%EB%B3%80%EA%B2%BD.pdf" 
+                            width="100%" 
+                            height="750px" 
+                            style="border: 1px solid var(--border-color); border-radius: var(--border-radius-md); flex: 1;">
+                    </iframe>
+                </div>
             </div>
 
         </div>
