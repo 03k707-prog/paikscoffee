@@ -208,7 +208,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 9. 대시보드 판매량 차트(그래프) 호버 마크업 활성화 및 초기 로딩
+    // 9. 모바일 앱 모드 좌측 패널(사이드바) 토글 로직
+    const toggleSidebarBtn = document.getElementById('toggle-sidebar-btn');
+    const closeSidebarBtn = document.getElementById('close-sidebar-btn');
+    const sidebar = document.getElementById('app-sidebar');
+    const overlay = document.getElementById('sidebar-overlay');
+
+    if (toggleSidebarBtn && closeSidebarBtn && sidebar && overlay) {
+        const toggleSidebar = () => {
+            sidebar.classList.toggle('show');
+            overlay.classList.toggle('show');
+        };
+
+        toggleSidebarBtn.addEventListener('click', toggleSidebar);
+        closeSidebarBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+
+        // 네비게이션 아이템 클릭 시 모바일에선 사이드바를 자동으로 닫아줌
+        const mobileNavItems = sidebar.querySelectorAll('.nav-item');
+        mobileNavItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (sidebar.classList.contains('show')) {
+                    toggleSidebar();
+                }
+            });
+        });
+    }
+
+    // 10. 대시보드 판매량 차트(그래프) 호버 마크업 활성화 및 초기 로딩
     initBeverageSelector();
     renderInventoryTable('', 'ALL');
 });

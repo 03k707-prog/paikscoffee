@@ -1042,3 +1042,110 @@ label {
 .animate-spin-slow {
     animation: spin 8s linear infinite;
 }
+
+/* --- Responsive & Mobile Drawer Sidebar CSS --- */
+
+/* Desktop view: Hide mobile triggers */
+.toggle-sidebar-btn,
+.close-sidebar-btn,
+.sidebar-overlay {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    /* Aside drawer layout */
+    aside {
+        transform: translateX(-100%);
+        transition: transform var(--transition-normal);
+        box-shadow: none;
+        z-index: 110; /* Higher than header and overlay */
+    }
+    
+    aside.show {
+        transform: translateX(0);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    /* Show close button in drawer */
+    .close-sidebar-btn {
+        display: flex;
+    }
+    
+    /* Main occupies full width */
+    main {
+        margin-left: 0;
+        width: 100vw;
+    }
+    
+    /* Header layout for mobile */
+    header {
+        padding: 0 16px;
+    }
+    
+    /* Show hamburger button */
+    .toggle-sidebar-btn {
+        display: flex;
+        margin-right: 8px;
+    }
+    
+    /* Sidebar Backdrop Overlay */
+    .sidebar-overlay {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.4);
+        z-index: 105;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity var(--transition-fast), visibility var(--transition-fast);
+    }
+    
+    .sidebar-overlay.show {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* Hide some header tabs/actions on narrow screens to prevent overlap */
+    .header-tabs {
+        display: none; /* Hide top bar overview tabs on mobile, sidebar navigation handles it */
+    }
+    
+    .header-right .btn-export,
+    .header-right .divider-v {
+        display: none;
+    }
+    
+    /* Responsive grids */
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-body {
+        padding: 16px;
+    }
+    
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    
+    .calendar-widget {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .header-right .btn-shift {
+        padding: 6px 12px;
+        font-size: 11px;
+    }
+}

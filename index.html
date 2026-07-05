@@ -14,13 +14,22 @@
 </head>
 <body>
 
+<!-- Sidebar Overlay Backdrop for Mobile -->
+<div class="sidebar-overlay" id="sidebar-overlay"></div>
+
 <div class="app-container">
     
     <!-- Sidebar Navigation -->
-    <aside>
-        <div class="logo-container">
-            <h1 class="logo-title">광희's <span class="highlight">빽다방</span></h1>
-            <p class="logo-sub">GANGNAM NO. 104</p>
+    <aside id="app-sidebar">
+        <div class="logo-container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+            <div>
+                <h1 class="logo-title">광희's <span class="highlight">빽다방</span></h1>
+                <p class="logo-sub">GANGNAM NO. 104</p>
+            </div>
+            <!-- Close Button (only visible on mobile) -->
+            <button class="btn-icon close-sidebar-btn" id="close-sidebar-btn">
+                <span class="material-symbols-outlined">close</span>
+            </button>
         </div>
         
         <nav class="sidebar-nav">
@@ -72,6 +81,10 @@
         <!-- Top App Bar -->
         <header>
             <div class="header-left">
+                <!-- Hamburger Menu Button (only visible on mobile) -->
+                <button class="btn-icon toggle-sidebar-btn" id="toggle-sidebar-btn">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
                 <span class="header-title">빽다방 통합 매장관리</span>
                 <div class="header-tabs">
                     <a class="header-tab-link active" href="#">대시보드</a>
