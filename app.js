@@ -423,18 +423,23 @@ document.addEventListener('DOMContentLoaded', () => {
         // 꺾은선 그리기
         svgContent += `<polyline class="chart-line" points="${linePoints}"></polyline>`;
         
-        // 포인트 동그라미 & 툴팁 그리기 (특정 간격으로 포인트 배치)
-        const step = Math.ceil(data.length / 15);
+        // 포인트 동그라미 그리기 (모든 영업일 포인트를 동적으로 주입하여 클릭 인터랙션 확보)
         data.forEach((r, idx) => {
-            if (idx % step === 0 || idx === data.length - 1) {
-                const x = getX(idx);
-                const y = getY(r.total_sales);
-                svgContent += `
-                    <circle class="chart-point" cx="${x}" cy="${y}" r="4.5">
-                        <title>${r.date}\n총 매출: ${r.total_sales.toLocaleString()}원\n홀: ${r.hall_sales.toLocaleString()}원\n배달: ${r.delivery_sales.toLocaleString()}원</title>
-                    </circle>
-                `;
-            }
+            const x = getX(idx);
+            const y = getY(r.total_sales);
+            svgContent += `
+                <circle class="chart-point" cx="${x}" cy="${y}" r="4" 
+                        data-date="${r.date}"
+                        data-total="${r.total_sales}"
+                        data-hall="${r.hall_sales}"
+                        data-bmd="${r.baemin_delivery}"
+                        data-bmp="${r.baemin_pickup}"
+                        data-cpe="${r.coupang_eats}"
+                        data-x="${x}"
+                        data-y="${y}">
+                    <title>${r.date}\n클릭 시 채널별 상세 매출 플로팅</title>
+                </circle>
+            `;
         });
 
         // X축 날짜 레이블 (6개 데이터 포인트만 샘플링)
@@ -451,6 +456,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
         svgContent += `</svg>`;
         box.innerHTML = svgContent;
+
+        // 포인트 클릭 시 팝업 띄우기 이벤트 바인딩
+        const points = box.querySelectorAll('.chart-point');
+        const tooltip = document.getElementById('chart-floating-tooltip');
+        
+        points.forEach(pt => {
+            pt.addEventListener('click', (e) => {
+                e.stopPropagation(); // document 클릭 전파 차단
+                
+                const date = pt.getAttribute('data-date');
+                const total = parseInt(pt.getAttribute('data-total')).toLocaleString() + '원';
+                const hall = parseInt(pt.getAttribute('data-hall')).toLocaleString() + '원';
+                const bmd = parseInt(pt.getAttribute('data-bmd')).toLocaleString() + '원';
+                const bmp = parseInt(pt.getAttribute('data-bmp')).toLocaleString() + '원';
+                const cpe = parseInt(pt.getAttribute('data-cpe')).toLocaleString() + '원';
+                
+                const cx = parseFloat(pt.getAttribute('data-x'));
+                const cy = parseFloat(pt.getAttribute('data-y'));
+                
+                document.getElementById('floating-date').textContent = date;
+                document.getElementById('floating-total').textContent = total;
+                document.getElementById('floating-hall').textContent = hall;
+                document.getElementById('floating-bm-del').textContent = bmd;
+                document.getElementById('floating-bm-pic').textContent = bmp;
+                document.getElementById('floating-cp-eats').textContent = cpe;
+                
+                // 팝업 위치 세팅 (차트 가로 위치를 고려해 팝업이 우측으로 넘치지 않게 조율)
+                const tooltipWidth = 170;
+                let leftPos = cx + 12;
+                if (cx + tooltipWidth > box.clientWidth) {
+                    leftPos = cx - tooltipWidth - 12; // 팝업을 좌측으로 배치
+                }
+                
+                tooltip.style.left = leftPos + 'px';
+                tooltip.style.top = (cy - 60) + 'px';
+                tooltip.style.display = 'block';
+                
+                // 포인트 크기 하이라이트 피드백
+                points.forEach(p => p.setAttribute('r', '4'));
+                pt.setAttribute('r', '7');
+            });
+        });
+
+        // 다른 영역 클릭 시 팝업 숨기기 글로벌 리스너
+        const handleOutsideClick = () => {
+            if (tooltip) {
+                tooltip.style.display = 'none';
+                points.forEach(p => p.setAttribute('r', '4'));
+            }
+        };
+        document.removeEventListener('click', handleOutsideClick);
+        document.addEventListener('click', handleOutsideClick);
     }
 
     // 카테고리별 예상 매출 추이 차트 렌더링 (SVG)
