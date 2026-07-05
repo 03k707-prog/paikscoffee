@@ -455,11 +455,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         svgContent += `</svg>`;
-        box.innerHTML = svgContent;
+        
+        // 동적 툴팁 팝업 HTML 구조 주입 (innerHTML 덮어쓰기 삭제 현상 방지)
+        const tooltipHtml = `
+            <div id="chart-floating-tooltip" style="position: absolute; display: none; background: rgba(15, 23, 42, 0.95); color: #ffffff; padding: 12px 16px; border-radius: 8px; box-shadow: var(--shadow-lg); z-index: 1000; font-size: 11px; border: 1px solid rgba(255, 255, 255, 0.15); pointer-events: none; backdrop-filter: blur(4px); min-width: 170px;">
+                <div id="floating-date" style="font-weight: 800; border-bottom: 1px solid rgba(255, 255, 255, 0.2); padding-bottom: 4px; margin-bottom: 6px; color: var(--primary);"></div>
+                <div style="display: flex; flex-direction: column; gap: 4px;">
+                    <div style="display: flex; justify-content: space-between;"><span>총 매출액:</span><span id="floating-total" style="font-weight: 700;">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; opacity: 0.85;"><span>ㄴ 홀 매출:</span><span id="floating-hall">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; opacity: 0.85;"><span>ㄴ 배민 배달:</span><span id="floating-bm-del">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; opacity: 0.85;"><span>ㄴ 배민 픽업:</span><span id="floating-bm-pic">0원</span></div>
+                    <div style="display: flex; justify-content: space-between; opacity: 0.85;"><span>ㄴ 쿠팡이츠:</span><span id="floating-cp-eats">0원</span></div>
+                </div>
+            </div>
+        `;
+        box.innerHTML = svgContent + tooltipHtml;
 
         // 포인트 클릭 시 팝업 띄우기 이벤트 바인딩
         const points = box.querySelectorAll('.chart-point');
-        const tooltip = document.getElementById('chart-floating-tooltip');
+        const tooltip = box.querySelector('#chart-floating-tooltip');
         
         points.forEach(pt => {
             pt.addEventListener('click', (e) => {
