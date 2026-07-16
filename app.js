@@ -359,7 +359,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const weekdaySums = [0, 0, 0, 0, 0, 0, 0];
         const weekdayCounts = [0, 0, 0, 0, 0, 0, 0];
         INCOME_DAILY_RECORDS.forEach(r => {
-            const d = new Date(r.date);
+            const parts = r.date.split('-');
+            const year = parseInt(parts[0], 10);
+            const month = parseInt(parts[1], 10);
+            const day = parseInt(parts[2], 10);
+            const d = new Date(year, month - 1, day);
             const dayIdx = d.getDay();
             weekdaySums[dayIdx] += r.total_sales;
             weekdayCounts[dayIdx]++;
@@ -913,22 +917,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const opt = document.createElement('option');
             opt.value = r.date;
             
-            const d = new Date(r.date);
+            const parts = r.date.split('-');
+            const year = parts[0];
+            const month = parseInt(parts[1], 10);
+            const day = parseInt(parts[2], 10);
+            const d = new Date(year, month - 1, day);
             const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
-            const formatted = `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 (${weekdays[d.getDay()]})`;
+            const formatted = `${year}년 ${month}월 ${day}일 (${weekdays[d.getDay()]})`;
             
             opt.textContent = formatted;
             dateSelect.appendChild(opt);
         });
 
-        // 접속 시간 기준 날짜가 있는 경우 해당 날짜 선택, 없는 경우 최신 날짜 선택
-        if (INCOME_DAILY_RECORDS.some(r => r.date === todayStr)) {
-            dateSelect.value = todayStr;
-            updateDashboardKPIs(todayStr);
-        } else if (sortedRecords.length > 0) {
-            dateSelect.value = sortedRecords[0].date;
-            updateDashboardKPIs(sortedRecords[0].date);
-        }
+        // 가장 최근 영업일 기본 선택
+        // 접속한 오늘 날짜가 실제 대장에 이미 등록되어 있었다면 오늘을 기본 선택하고,
+        // 그렇지 않다면 대장 상에서 실제 매출 데이터가 등록되어 있는 가장 최신의 영업일(7/16)을 기본 선택
+        const originalLatestRecord = sortedRecords.find(r => r.total_sales > 0) || sortedRecords[0];
+        const defaultDate = hasTodayRecord ? todayStr : (originalLatestRecord ? originalLatestRecord.date : todayStr);
+        
+        dateSelect.value = defaultDate;
+        updateDashboardKPIs(defaultDate);
 
         // 선택값 변경 감지
         dateSelect.addEventListener('change', () => {
