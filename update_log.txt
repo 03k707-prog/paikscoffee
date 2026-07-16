@@ -1,15 +1,17 @@
-=== UPDATE LOG: 2026-07-05 14:16:34.275440 ===
-Source Excel: C:\Users\JO\Desktop\PAIK\data\주문현황_OMS260630539944_20260705.xlsx
-Skipped existing items (already in DB): 16
-Newly added items count: 9
+=== UPDATE LOG: 2026-07-16 22:22:26.590427 ===
+Source Excel: C:\Users\JO\Desktop\PAIK\주문현황_OMS260715602337_20260716.xlsx
+Skipped existing items (already in DB): 11
+Newly added items count: 11
 
 --- Newly Added Items List ---
-ID: P0036 | Name: 빽다방 콜드브루 오리지널 커피원액 (에티오피아 100%) | Spec: 300ML | Unit: EA | Price: 8700 | Tax: 과세
-ID: P0037 | Name: 베지밀A | Spec: 950ML | Unit: EA | Price: 1800 | Tax: 과세
-ID: P0038 | Name: 빽다방 청포도 플라워향 에이드 | Spec: 1.5L(6EA 주문 시, 박스배송) | Unit: EA | Price: 18200 | Tax: 과세
-ID: P0039 | Name: 농축유청단백 코코아 파우더 | Spec: 500G | Unit: EA | Price: 18000 | Tax: 과세
-ID: P0040 | Name: 빽다방 체리파우더 | Spec: 1KG | Unit: EA | Price: 5000 | Tax: 과세
-ID: P0041 | Name: 빽다방 옛날미숫가루 | Spec: 1KG | Unit: EA | Price: 6800 | Tax: 과세
-ID: P0042 | Name: 빽다방 밀크파우더 | Spec: 1KG | Unit: EA | Price: 8200 | Tax: 과세
-ID: P0043 | Name: 크리미단팥빵 | Spec: 120G*12EA | Unit: BOX | Price: 13560 | Tax: 과세
-ID: P0044 | Name: 츄러스쫀득볼 | Spec: 900G | Unit: EA | Price: 10000 | Tax: 과세
+ID: P0078 | Name: 맛카롱(딸기크런치) | Spec: 30G * 10 EA | Unit: BOX | Price: 13800 | Tax: 과세
+ID: P0079 | Name: 리얼베이스 우베 | Spec: 1KG | Unit: EA | Price: 8400 | Tax: 과세
+ID: P0080 | Name: 빽다방 보틀 텀블러 500ML | Spec: 500ML | Unit: EA | Price: 6200 | Tax: 과세
+ID: P0081 | Name: 빽다방 보틀 텀블러 750ML | Spec: 750ML | Unit: EA | Price: 6800 | Tax: 과세
+ID: P0082 | Name: 빽쿡 바나나소스 | Spec: 1KG | Unit: EA | Price: 9400 | Tax: 과세
+ID: P0083 | Name: 사양벌꿀 | Spec: 1KG | Unit: EA | Price: 8900 | Tax: 면세
+ID: P0084 | Name: 돌 망고 주스 | Spec: 1L | Unit: EA | Price: 3100 | Tax: 과세
+ID: P0085 | Name: 서울우유 연유 500g | Spec: 500G | Unit: EA | Price: 4400 | Tax: 면세
+ID: P0086 | Name: 빽다방 바나나파우더 | Spec: 1KG | Unit: EA | Price: 11700 | Tax: 과세
+ID: P0087 | Name: GLAD 프레스앤씰 매직랩 대용량 | Spec: 31M*30CM | Unit: EA | Price: 8900 | Tax: 과세
+ID: P0088 | Name: 빽다방 2구 비닐봉투 | Spec: (335*300)*1,000EA | Unit: BOX | Price: 70600 | Tax: 과세
