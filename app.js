@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // 매출 실적 카드 데이터 실시간 상승 누적
-        // 평균 가격 4,500원 기준으로 임의 매출 증가 계산
         const salesAmountAdded = (salesQty * 4800);
         totalSalesAccumulated += salesAmountAdded;
         totalOrdersAccumulated += salesQty;
@@ -162,6 +161,22 @@ document.addEventListener('DOMContentLoaded', () => {
         // KPI 애니메이션 갱신
         kpiSales.textContent = `${totalSalesAccumulated.toLocaleString()} KRW`;
         kpiOrders.textContent = `${totalOrdersAccumulated}`;
+
+        // 선택된 날짜의 레코드 데이터 실시간 업데이트 반영
+        const dateSelect = document.getElementById('dashboard-date-select');
+        if (dateSelect) {
+            const record = INCOME_DAILY_RECORDS.find(r => r.date === dateSelect.value);
+            if (record) {
+                record.total_sales = totalSalesAccumulated;
+                record.total_orders = totalOrdersAccumulated;
+                
+                const avgTicket = totalOrdersAccumulated > 0 ? Math.round(totalSalesAccumulated / totalOrdersAccumulated) : 0;
+                const kpiAvgTicket = document.getElementById('kpi-avg-ticket');
+                if (kpiAvgTicket) {
+                    kpiAvgTicket.textContent = `${avgTicket.toLocaleString()} KRW`;
+                }
+            }
+        }
 
         // 테이블 갱신
         renderInventoryTable(searchInput.value, categorySelect.value);
@@ -838,6 +853,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // KPI 값 업데이트
         totalSalesAccumulated = record.total_sales;
+        totalOrdersAccumulated = record.total_orders;
         kpiSales.textContent = `${totalSalesAccumulated.toLocaleString()} KRW`;
         
         const totalOrders = record.total_orders;
@@ -855,7 +871,41 @@ document.addEventListener('DOMContentLoaded', () => {
         const dateSelect = document.getElementById('dashboard-date-select');
         if (!dateSelect) return;
 
-        // 최신 날짜순 정렬 (2026-07-16 -> 2026-07-15 ...)
+        // 접속 시간 기준의 로컬 날짜 계산 (YYYY-MM-DD)
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        const todayStr = `${yyyy}-${mm}-${dd}`;
+
+        // 접속한 오늘 날짜가 매출 대장에 없는 경우, 대장에 빈 오늘자 레코드를 동적으로 추가
+        const hasTodayRecord = INCOME_DAILY_RECORDS.some(r => r.date === todayStr);
+        if (!hasTodayRecord) {
+            INCOME_DAILY_RECORDS.push({
+                "date": todayStr,
+                "hall_sales": 0,
+                "delivery_sales": 0,
+                "pickup_sales": 0,
+                "baemin_delivery": 0,
+                "baemin_delivery_orders": 0,
+                "baemin_pickup": 0,
+                "baemin_pickup_orders": 0,
+                "coupang_eats": 0,
+                "coupang_eats_orders": 0,
+                "total_sales": 0,
+                "total_orders": 0,
+                "dod_change": 0,
+                "dod_pct": 0.0,
+                "categories": {
+                    "coffee": 0,
+                    "smoothie": 0,
+                    "non_coffee": 0,
+                    "bakery": 0
+                }
+            });
+        }
+
+        // 최신 날짜순 정렬 (접속 시간 기준 날짜 포함)
         const sortedRecords = [...INCOME_DAILY_RECORDS].sort((a, b) => b.date.localeCompare(a.date));
         
         dateSelect.innerHTML = '';
@@ -871,8 +921,11 @@ document.addEventListener('DOMContentLoaded', () => {
             dateSelect.appendChild(opt);
         });
 
-        // 가장 최근 영업일(오늘 날짜: 2026-07-16)을 기본 선택
-        if (sortedRecords.length > 0) {
+        // 접속 시간 기준 날짜가 있는 경우 해당 날짜 선택, 없는 경우 최신 날짜 선택
+        if (INCOME_DAILY_RECORDS.some(r => r.date === todayStr)) {
+            dateSelect.value = todayStr;
+            updateDashboardKPIs(todayStr);
+        } else if (sortedRecords.length > 0) {
             dateSelect.value = sortedRecords[0].date;
             updateDashboardKPIs(sortedRecords[0].date);
         }
