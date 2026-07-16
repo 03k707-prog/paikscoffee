@@ -1101,6 +1101,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 12. 원부자재 긴급 발주 버튼 외부 몰(OMS) 새 탭 이동 연동
+    const btnOrder = document.querySelector('.btn-order');
+    if (btnOrder) {
+        btnOrder.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.open('https://oms.theborn.co.kr/store/order/main', '_blank');
+        });
+    }
+
     // 11. 대시보드 판매량 차트(그래프) 호버 마크업 활성화 및 초기 로딩
     initBeverageSelector();
     initDashboardDatePicker();
