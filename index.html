@@ -377,10 +377,10 @@
                     <div class="bento-card weather-card">
                         <div class="weather-header">
                             <div class="weather-info">
-                                <span class="material-symbols-outlined weather-icon-sun">sunny</span>
+                                <span class="material-symbols-outlined weather-icon-sun" id="weather-icon">sunny</span>
                                 <div>
-                                    <h4 style="font-size:18px; font-weight:700;">맑음</h4>
-                                    <p style="font-size:12px; opacity:0.8;">서울특별시 강남구, 24°C</p>
+                                    <h4 style="font-size:18px; font-weight:700;" id="weather-status">맑음</h4>
+                                    <p style="font-size:12px; opacity:0.8;" id="weather-location">경기도 평택시, 24°C</p>
                                 </div>
                             </div>
                         </div>
@@ -388,32 +388,12 @@
                         <div class="weather-analysis-box">
                             <p class="weather-analysis-title">날씨 영향 매출 분석</p>
                             <div class="flex" style="display:flex; align-items:flex-end; gap:8px;">
-                                <span class="weather-analysis-value">+18%</span>
+                                <span class="weather-analysis-value" id="weather-effect-val">+18%</span>
                                 <span style="font-size:11px; margin-bottom:4px; opacity:0.9;">추가 매출 예상</span>
                             </div>
-                            <p class="weather-analysis-desc">
+                            <p class="weather-analysis-desc" id="weather-effect-desc">
                                 현재 맑고 더운 기온으로 인해 '아이스 아메리카노' 및 '빽스치노' 스무디군의 판매량이 급증하는 추세입니다.
                             </p>
-                        </div>
-                    </div>
-
-                    <!-- HQ Notifications -->
-                    <div class="bento-card">
-                        <div class="bento-card-header" style="margin-bottom: 16px;">
-                            <h4 class="bento-card-title">본사 공지사항</h4>
-                            <span class="w-2 h-2" style="width:8px; height:8px; background-color:var(--error); border-radius:50%;"></span>
-                        </div>
-                        <div style="display:flex; flex-direction:column; gap:12px;">
-                            <div style="padding:12px; background-color:#F8FAFC; border-radius:var(--border-radius-md); border-left:4px solid var(--secondary);">
-                                <p style="font-size:12px; font-weight:700; color:var(--secondary); margin-bottom:4px;">겨울 신메뉴 캠페인 안내</p>
-                                <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">겨울 홍보물 포스터 및 신규 소스류가 10월 28일에 입고 예정입니다.</p>
-                                <p style="font-size:9px; color:var(--text-light); margin-top:6px;">2시간 전</p>
-                            </div>
-                            <div style="padding:12px; background-color:#F8FAFC; border-radius:var(--border-radius-md);">
-                                <p style="font-size:12px; font-weight:700; color:var(--text-color); margin-bottom:4px;">원두 물류 지연 안내</p>
-                                <p style="font-size:11px; color:var(--text-muted); line-height:1.4;">항만 적체로 원두 입고가 4시간 지연됩니다. 현재 매장 재고는 안전합니다.</p>
-                                <p style="font-size:9px; color:var(--text-light); margin-top:6px;">어제</p>
-                            </div>
                         </div>
                     </div>
 

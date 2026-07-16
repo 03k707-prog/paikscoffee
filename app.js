@@ -1007,8 +1007,103 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 실시간 경기도 평택시 날씨 연동 함수
+    async function fetchPyeongtaekWeather() {
+        const iconEl = document.getElementById('weather-icon');
+        const statusEl = document.getElementById('weather-status');
+        const locationEl = document.getElementById('weather-location');
+        const effectValEl = document.getElementById('weather-effect-val');
+        const effectDescEl = document.getElementById('weather-effect-desc');
+
+        if (!statusEl || !locationEl) return;
+
+        try {
+            // Open-Meteo API for Pyeongtaek-si (36.9922, 127.1128)
+            const url = 'https://api.open-meteo.com/v1/forecast?latitude=36.9922&longitude=127.1128&current=temperature_2m,weather_code';
+            const response = await fetch(url);
+            if (!response.ok) throw new Error('Weather API response error');
+            const data = await response.json();
+            
+            const temp = Math.round(data.current.temperature_2m);
+            const code = data.current.weather_code;
+
+            // WMO Weather interpretation codes
+            let status = '맑음';
+            let icon = 'sunny';
+            let effectVal = '+15%';
+            let effectDesc = '쾌적하고 온화한 날씨로 인해 매장 매출이 상승하는 추세입니다.';
+
+            if (code === 0) {
+                status = '맑음';
+                icon = 'sunny';
+            } else if ([1, 2, 3].includes(code)) {
+                status = '구름조금';
+                icon = 'partly_cloudy_day';
+            } else if ([45, 48].includes(code)) {
+                status = '안개';
+                icon = 'foggy';
+            } else if ([51, 53, 55, 61, 63, 65, 80, 81, 82].includes(code)) {
+                status = '비옴';
+                icon = 'rainy';
+            } else if ([71, 73, 75, 77, 85, 86].includes(code)) {
+                status = '눈옴';
+                icon = 'ac_unit';
+            } else if ([95, 96, 99].includes(code)) {
+                status = '뇌우';
+                icon = 'thunderstorm';
+            }
+
+            // Adjust impact description based on temperature and status
+            if (temp >= 28) {
+                effectVal = '+25%';
+                effectDesc = `기온이 ${temp}°C로 더운 날씨의 영향으로 시원한 '아이스 아메리카노' 및 '빽스치노' 스무디군의 판매량이 대폭 급증하고 있습니다.`;
+            } else if (temp <= 10) {
+                effectVal = '+12%';
+                effectDesc = `기온이 ${temp}°C로 쌀쌀한 날씨의 영향으로 따뜻한 '아메리카노' 및 '라떼'류, '달달연유라떼'의 선호도가 증가하고 있습니다.`;
+            } else {
+                if (status === '비옴') {
+                    effectVal = '-8%';
+                    effectDesc = '강우로 인해 홀 방문 고객이 다소 줄었으나, 배달 및 픽업 매출 비중이 유지되고 있습니다.';
+                } else if (status === '눈옴') {
+                    effectVal = '-12%';
+                    effectDesc = '강설로 인해 매장 방문 고객이 감소하였으므로 배달 위주 프로모션을 추천합니다.';
+                } else {
+                    effectVal = '+18%';
+                    effectDesc = `현재 기온 ${temp}°C의 화창한 날씨 영향으로 아웃도어 음료 및 홀 매장 방문률이 안정적인 상승세를 유지하고 있습니다.`;
+                }
+            }
+
+            // Update UI
+            if (iconEl) {
+                iconEl.textContent = icon;
+                if (icon === 'sunny') {
+                    iconEl.className = 'material-symbols-outlined weather-icon-sun';
+                    iconEl.style.color = '#F59E0B'; // Amber
+                } else if (icon === 'rainy') {
+                    iconEl.className = 'material-symbols-outlined weather-icon-rain';
+                    iconEl.style.color = '#3B82F6'; // Blue
+                } else if (icon === 'ac_unit') {
+                    iconEl.className = 'material-symbols-outlined weather-icon-snow';
+                    iconEl.style.color = '#60A5FA'; // Light Blue
+                } else {
+                    iconEl.className = 'material-symbols-outlined weather-icon-cloud';
+                    iconEl.style.color = '#94A3B8'; // Slate
+                }
+            }
+            statusEl.textContent = status;
+            locationEl.textContent = `경기도 평택시, ${temp}°C`;
+            if (effectValEl) effectValEl.textContent = effectVal;
+            if (effectDescEl) effectDescEl.textContent = effectDesc;
+
+        } catch (error) {
+            console.error('Failed to fetch Pyeongtaek weather:', error);
+            locationEl.textContent = `경기도 평택시, 22°C`;
+        }
+    }
+
     // 11. 대시보드 판매량 차트(그래프) 호버 마크업 활성화 및 초기 로딩
     initBeverageSelector();
     initDashboardDatePicker();
+    fetchPyeongtaekWeather();
     renderInventoryTable('', 'ALL');
 });
