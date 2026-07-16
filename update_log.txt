@@ -1,7 +1,8 @@
-=== UPDATE LOG: 2026-07-16 22:25:25.479269 ===
-Source Excel: C:\Users\JO\Desktop\PAIK\주문현황_OMS260707565389_20260716.xlsx
+=== UPDATE LOG: 2026-07-16 22:27:08.082295 ===
+Source Excel: C:\Users\JO\Desktop\PAIK\주문현황_OMS260707565392_20260716.xlsx
 Skipped existing items (already in DB): 0
-Newly added items count: 1
+Newly added items count: 2
 
 --- Newly Added Items List ---
-ID: P0098 | Name: 시그니처 블렌드 원두 | Spec: 1KG*6팩 | Unit: BOX | Price: 129000 | Tax: 과세
+ID: P0099 | Name: 서울우유 생크림 500ml | Spec: 500ML | Unit: EA | Price: 4000 | Tax: 과세
+ID: P0100 | Name: 서울우유 바리스타밀크 1L | Spec: 1L*16EA | Unit: BOX | Price: 30670 | Tax: 면세
