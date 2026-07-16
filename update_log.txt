@@ -1,15 +1,7 @@
-=== UPDATE LOG: 2026-07-16 22:23:16.404912 ===
-Source Excel: C:\Users\JO\Desktop\PAIK\주문현황_OMS260710582306_20260716.xlsx
-Skipped existing items (already in DB): 19
-Newly added items count: 9
+=== UPDATE LOG: 2026-07-16 22:25:25.479269 ===
+Source Excel: C:\Users\JO\Desktop\PAIK\주문현황_OMS260707565389_20260716.xlsx
+Skipped existing items (already in DB): 0
+Newly added items count: 1
 
 --- Newly Added Items List ---
-ID: P0089 | Name: 보스턴핫(돼지고기: 외국산, 국내산, 쇠고기: 호주산) | Spec: 300G*20EA | Unit: BOX | Price: 60000 | Tax: 과세
-ID: P0090 | Name: 우롱차(사계춘차) | Spec: 7G*25T | Unit: 팩 | Price: 10500 | Tax: 과세
-ID: P0091 | Name: 더진한 유자애플 | Spec: 1.5KG | Unit: EA | Price: 15500 | Tax: 과세
-ID: P0092 | Name: 샌드위치케이스(바디)(185*80*30) | Spec: 100EA | Unit: BOX | Price: 18800 | Tax: 과세
-ID: P0093 | Name: 샌드위치케이스(뚜껑)(185*80*30) | Spec: 100EA | Unit: BOX | Price: 10800 | Tax: 과세
-ID: P0094 | Name: MEC3 스트라치아텔라 다크(초코쉘) | Spec: 850G(6EA 주문 시, 박스배송) | Unit: EA | Price: 18800 | Tax: 과세
-ID: P0095 | Name: 큰컵24온스돔뚜껑 | Spec: 1,000EA | Unit: BOX | Price: 17000 | Tax: 과세
-ID: P0096 | Name: 크래프트 큐브 치즈케익 | Spec: 1KG | Unit: EA | Price: 21000 | Tax: 과세
-ID: P0097 | Name: 서울우유 펠렛치즈B 1kg | Spec: 1KG | Unit: EA | Price: 9500 | Tax: 과세
+ID: P0098 | Name: 시그니처 블렌드 원두 | Spec: 1KG*6팩 | Unit: BOX | Price: 129000 | Tax: 과세

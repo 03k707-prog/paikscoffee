@@ -1163,6 +1163,18 @@ const INITIAL_ITEMS = [
     "current_qty": 30.0,
     "safety_qty": 10.0,
     "category": "유제품"
+  },
+  {
+    "품목ID": "P0098",
+    "품목명": "시그니처 블렌드 원두",
+    "규격": "1KG*6팩",
+    "단위": "BOX",
+    "단가": 129000,
+    "과세구분": "과세",
+    "원본품목명": "시그니처 블렌드 원두 [1KG*6팩]",
+    "current_qty": 15.0,
+    "safety_qty": 5.0,
+    "category": "원두/커피"
   }
 ];
 const RECIPES = [
