@@ -3,7 +3,7 @@ import json
 import os
 import datetime
 
-excel_path = r"C:\Users\JO\Desktop\PAIK\data\income_0705.xlsx"
+excel_path = r"C:\Users\JO\Desktop\PAIK\data\income_0716.xlsx"
 output_js_path = r"c:\Users\JO\Desktop\PAIK\income_data.js"
 
 def parse_date(val):
