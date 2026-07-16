@@ -831,7 +831,87 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 날짜 선택 데이터 업데이트 함수
+    function updateDashboardKPIs(selectedDate) {
+        const record = INCOME_DAILY_RECORDS.find(r => r.date === selectedDate);
+        if (!record) return;
+
+        // KPI 값 업데이트
+        totalSalesAccumulated = record.total_sales;
+        kpiSales.textContent = `${totalSalesAccumulated.toLocaleString()} KRW`;
+        
+        const totalOrders = record.total_orders;
+        kpiOrders.textContent = totalOrders.toLocaleString();
+        
+        const avgTicket = totalOrders > 0 ? Math.round(totalSalesAccumulated / totalOrders) : 0;
+        const kpiAvgTicket = document.getElementById('kpi-avg-ticket');
+        if (kpiAvgTicket) {
+            kpiAvgTicket.textContent = `${avgTicket.toLocaleString()} KRW`;
+        }
+    }
+
+    // 날짜 선택 위젯 초기화
+    function initDashboardDatePicker() {
+        const dateSelect = document.getElementById('dashboard-date-select');
+        if (!dateSelect) return;
+
+        // 최신 날짜순 정렬 (2026-07-16 -> 2026-07-15 ...)
+        const sortedRecords = [...INCOME_DAILY_RECORDS].sort((a, b) => b.date.localeCompare(a.date));
+        
+        dateSelect.innerHTML = '';
+        sortedRecords.forEach(r => {
+            const opt = document.createElement('option');
+            opt.value = r.date;
+            
+            const d = new Date(r.date);
+            const weekdays = ['일', '월', '화', '수', '목', '금', '토'];
+            const formatted = `${d.getFullYear()}년 ${d.getMonth() + 1}월 ${d.getDate()}일 (${weekdays[d.getDay()]})`;
+            
+            opt.textContent = formatted;
+            dateSelect.appendChild(opt);
+        });
+
+        // 가장 최근 영업일(오늘 날짜: 2026-07-16)을 기본 선택
+        if (sortedRecords.length > 0) {
+            dateSelect.value = sortedRecords[0].date;
+            updateDashboardKPIs(sortedRecords[0].date);
+        }
+
+        // 선택값 변경 감지
+        dateSelect.addEventListener('change', () => {
+            updateDashboardKPIs(dateSelect.value);
+        });
+        
+        // Chevron 버튼 바인딩 (이전/이후 날짜 이동)
+        const buttons = document.querySelectorAll('.calendar-widget button');
+        const btnPrev = buttons[0];
+        const btnNext = buttons[2];
+        
+        if (btnPrev) {
+            btnPrev.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentIdx = sortedRecords.findIndex(r => r.date === dateSelect.value);
+                if (currentIdx < sortedRecords.length - 1) {
+                    dateSelect.value = sortedRecords[currentIdx + 1].date;
+                    updateDashboardKPIs(dateSelect.value);
+                }
+            });
+        }
+        
+        if (btnNext) {
+            btnNext.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentIdx = sortedRecords.findIndex(r => r.date === dateSelect.value);
+                if (currentIdx > 0) {
+                    dateSelect.value = sortedRecords[currentIdx - 1].date;
+                    updateDashboardKPIs(dateSelect.value);
+                }
+            });
+        }
+    }
+
     // 11. 대시보드 판매량 차트(그래프) 호버 마크업 활성화 및 초기 로딩
     initBeverageSelector();
+    initDashboardDatePicker();
     renderInventoryTable('', 'ALL');
 });

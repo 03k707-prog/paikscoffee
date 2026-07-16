@@ -401,6 +401,25 @@ header {
     padding: 0 12px;
 }
 
+#dashboard-date-select {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-main);
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 12px;
+    font-family: inherit;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#dashboard-date-select::-ms-expand {
+    display: none;
+}
+
 /* Grid Layouts */
 .dashboard-grid {
     display: grid;
