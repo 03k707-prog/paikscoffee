@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     kpiAvgTicket.textContent = `${avgTicket.toLocaleString()} KRW`;
                 }
             }
+            // 전일 대비 증감율 배지 실시간 계산 갱신
+            updateSalesPercentage(dateSelect.value);
         }
 
         // 테이블 갱신
@@ -850,6 +852,37 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // 전일 대비 매출 증감율(%) 계산 및 배지 업데이트
+    function updateSalesPercentage(selectedDate) {
+        const salesPctBadge = document.getElementById('kpi-sales-pct');
+        if (!salesPctBadge) return;
+        
+        // 크로놀로지 순서대로 저장된 대장에서 이전 레코드 찾기
+        const currentIdx = INCOME_DAILY_RECORDS.findIndex(r => r.date === selectedDate);
+        let prevSales = 0;
+        if (currentIdx > 0) {
+            prevSales = INCOME_DAILY_RECORDS[currentIdx - 1].total_sales;
+        } else {
+            // 첫 일자의 경우 기본 전일 매출(약 75만) 임의 지정
+            prevSales = 750000;
+        }
+        
+        const diff = totalSalesAccumulated - prevSales;
+        const pct = prevSales > 0 ? ((diff / prevSales) * 100).toFixed(1) : '0.0';
+        const pctVal = parseFloat(pct);
+        
+        if (pctVal > 0) {
+            salesPctBadge.textContent = `+${pctVal}%`;
+            salesPctBadge.className = 'kpi-badge trend-up';
+        } else if (pctVal < 0) {
+            salesPctBadge.textContent = `${pctVal}%`;
+            salesPctBadge.className = 'kpi-badge trend-down';
+        } else {
+            salesPctBadge.textContent = `0.0%`;
+            salesPctBadge.className = 'kpi-badge info';
+        }
+    }
+
     // 날짜 선택 데이터 업데이트 함수
     function updateDashboardKPIs(selectedDate) {
         const record = INCOME_DAILY_RECORDS.find(r => r.date === selectedDate);
@@ -868,6 +901,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (kpiAvgTicket) {
             kpiAvgTicket.textContent = `${avgTicket.toLocaleString()} KRW`;
         }
+
+        // 전일 대비 증감율 배지 업데이트
+        updateSalesPercentage(selectedDate);
     }
 
     // 날짜 선택 위젯 초기화
