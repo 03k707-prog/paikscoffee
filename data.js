@@ -1199,6 +1199,390 @@ const INITIAL_ITEMS = [
     "current_qty": 30.0,
     "safety_qty": 10.0,
     "category": "유제품"
+  },
+  {
+    "품목ID": "P0101",
+    "품목명": "레드불",
+    "규격": "250ML",
+    "단위": "EA",
+    "단가": 1500,
+    "과세구분": "과세",
+    "원본품목명": "레드불",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0102",
+    "품목명": "샤인머스캣 콤부차파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "샤인머스캣 콤부차파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0103",
+    "품목명": "초코 프로틴 파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 15000,
+    "과세구분": "과세",
+    "원본품목명": "초코 프로틴 파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0104",
+    "품목명": "바나나 프로틴 파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 15000,
+    "과세구분": "과세",
+    "원본품목명": "바나나 프로틴 파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0105",
+    "품목명": "매일 두유",
+    "규격": "950ML",
+    "단위": "EA",
+    "단가": 1300,
+    "과세구분": "면세",
+    "원본품목명": "두유",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0106",
+    "품목명": "빽다방 피스타치오 파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 14000,
+    "과세구분": "과세",
+    "원본품목명": "피스타치오 파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0107",
+    "품목명": "코코넛파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "코코넛파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0108",
+    "품목명": "코코넛칩",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 8000,
+    "과세구분": "과세",
+    "원본품목명": "코코넛칩",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0109",
+    "품목명": "자두샤베트파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 13000,
+    "과세구분": "과세",
+    "원본품목명": "자두샤베트파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0110",
+    "품목명": "애플샤베트파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 13000,
+    "과세구분": "과세",
+    "원본품목명": "애플샤베트파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0111",
+    "품목명": "제로 레몬베이스",
+    "규격": "1.2KG",
+    "단위": "EA",
+    "단가": 12500,
+    "과세구분": "과세",
+    "원본품목명": "제로 레몬베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0112",
+    "품목명": "제로 자몽베이스",
+    "규격": "1.2KG",
+    "단위": "EA",
+    "단가": 14200,
+    "과세구분": "과세",
+    "원본품목명": "제로 자몽베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0113",
+    "품목명": "제로 복숭아베이스",
+    "규격": "1.2KG",
+    "단위": "EA",
+    "단가": 13500,
+    "과세구분": "과세",
+    "원본품목명": "제로 복숭아베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0114",
+    "품목명": "딸기 피치 루이보스티백",
+    "규격": "50EA",
+    "단위": "BOX",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "딸기 피치 루이보스티",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0115",
+    "품목명": "동결건조 딸기 다이스",
+    "규격": "500G",
+    "단위": "EA",
+    "단가": 9800,
+    "과세구분": "과세",
+    "원본품목명": "동결건조 딸기 다이스",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0116",
+    "품목명": "율무차파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 11500,
+    "과세구분": "과세",
+    "원본품목명": "율무차파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0117",
+    "품목명": "아몬드브리즈",
+    "규격": "950ML",
+    "단위": "EA",
+    "단가": 1600,
+    "과세구분": "면세",
+    "원본품목명": "아몬드브리즈",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0118",
+    "품목명": "생강차베이스",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "생강차베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0119",
+    "품목명": "통단팥",
+    "규격": "3KG",
+    "단위": "EA",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "단팥",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0120",
+    "품목명": "인절미떡",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 7500,
+    "과세구분": "과세",
+    "원본품목명": "인절미떡",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0121",
+    "품목명": "블루베리 굿플잼",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 11000,
+    "과세구분": "과세",
+    "원본품목명": "블루베리 굿플잼",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0122",
+    "품목명": "초코볼",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 9500,
+    "과세구분": "과세",
+    "원본품목명": "초코볼",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0123",
+    "품목명": "초코볼 토핑용",
+    "규격": "500G",
+    "단위": "EA",
+    "단가": 5000,
+    "과세구분": "과세",
+    "원본품목명": "코코볼",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0124",
+    "품목명": "춘배 발바닥 사인판 초콜릿",
+    "규격": "50EA",
+    "단위": "BOX",
+    "단가": 18000,
+    "과세구분": "과세",
+    "원본품목명": "발바닥 사인판",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0125",
+    "품목명": "베버시티 망고베이스",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 11000,
+    "과세구분": "과세",
+    "원본품목명": "베버시티 망고베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0126",
+    "품목명": "민트초코파우더",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 13000,
+    "과세구분": "과세",
+    "원본품목명": "민트초코파우더",
+    "current_qty": 12.0,
+    "safety_qty": 4.0,
+    "category": "파우더류"
+  },
+  {
+    "품목ID": "P0127",
+    "품목명": "냉동 레몬슬라이스",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 9800,
+    "과세구분": "과세",
+    "원본품목명": "냉동 레몬슬라이스",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0128",
+    "품목명": "냉동라임",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 12000,
+    "과세구분": "과세",
+    "원본품목명": "냉동라임",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0129",
+    "품목명": "냉동 파인애플",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 7200,
+    "과세구분": "면세",
+    "원본품목명": "냉동파인애플",
+    "current_qty": 18.0,
+    "safety_qty": 6.0,
+    "category": "냉동과일"
+  },
+  {
+    "품목ID": "P0130",
+    "품목명": "딸기베이스",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 10500,
+    "과세구분": "과세",
+    "원본품목명": "딸기베이스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0131",
+    "품목명": "딸기소스",
+    "규격": "1KG",
+    "단위": "EA",
+    "단가": 9000,
+    "과세구분": "과세",
+    "원본품목명": "딸기소스",
+    "current_qty": 25.0,
+    "safety_qty": 8.0,
+    "category": "시럽/소스"
+  },
+  {
+    "품목ID": "P0132",
+    "품목명": "소프트아이스크림 믹스",
+    "규격": "10KG",
+    "단위": "EA",
+    "단가": 16000,
+    "과세구분": "과세",
+    "원본품목명": "아이스크림",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
   }
 ];
 const RECIPES = [
@@ -4297,6 +4681,1636 @@ const RECIPES = [
         "name": "일반 빨대",
         "amount": 1.0,
         "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0075",
+    "menu_name": "말차크림라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0012",
+        "name": "녹차파우더",
+        "amount": 34.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0076",
+    "menu_name": "말차크림망고스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0125",
+        "name": "베버시티 망고베이스",
+        "amount": 90.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0012",
+        "name": "녹차파우더",
+        "amount": 34.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0004",
+        "name": "냉동망고",
+        "amount": 20.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0077",
+    "menu_name": "콤부차 샤인머스캣",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0102",
+        "name": "샤인머스캣 콤부차파우더",
+        "amount": 26.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0078",
+    "menu_name": "프로틴 쉐이크 초코",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0105",
+        "name": "두유",
+        "amount": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0103",
+        "name": "초코 프로틴 파우더",
+        "amount": 39.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0079",
+    "menu_name": "프로틴 쉐이크 바나나",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0105",
+        "name": "두유",
+        "amount": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0104",
+        "name": "바나나 프로틴 파우더",
+        "amount": 39.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0080",
+    "menu_name": "크리미 콜드브루 바닐라",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0016",
+        "name": "바닐라파우더",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0036",
+        "name": "콜드브루커피원액",
+        "amount": 25.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0081",
+    "menu_name": "디카페인 크리미 콜드브루 바닐라",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0016",
+        "name": "바닐라파우더",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0053",
+        "name": "디카페인커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0082",
+    "menu_name": "크리미 콜드브루 카라멜",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0066",
+        "name": "카라멜소스",
+        "amount": 25.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0036",
+        "name": "콜드브루커피원액",
+        "amount": 25.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0083",
+    "menu_name": "디카페인 크리미 콜드브루 카라멜",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0066",
+        "name": "카라멜소스",
+        "amount": 25.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0053",
+        "name": "디카페인커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0084",
+    "menu_name": "레드불에이드",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0056",
+        "name": "레몬베이스",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0030",
+        "name": "자몽베이스",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0101",
+        "name": "레드불",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0128",
+        "name": "냉동라임",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0085",
+    "menu_name": "레드불꿀샷추",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0101",
+        "name": "레드불",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0083",
+        "name": "꿀",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 9.25,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0086",
+    "menu_name": "망고스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0084",
+        "name": "망고주스",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0004",
+        "name": "냉동망고",
+        "amount": 100.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0087",
+    "menu_name": "제로슈거 납작복숭아 아이스티",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0113",
+        "name": "제로 복숭아베이스",
+        "amount": 80.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0088",
+    "menu_name": "제로슈거 납작복숭아 아.샷.추",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0113",
+        "name": "제로 복숭아베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 9.25,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0089",
+    "menu_name": "제로슈거 레모네이드",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0111",
+        "name": "제로 레몬베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0050",
+        "name": "탄산수",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0090",
+    "menu_name": "제로슈거 자몽에이드",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0112",
+        "name": "제로 자몽베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0050",
+        "name": "탄산수",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0091",
+    "menu_name": "파인애플 담은 주스",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0060",
+        "name": "나타드코코",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0014",
+        "name": "돌 파인애플 주스",
+        "amount": 275.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0129",
+        "name": "냉동 파인애플",
+        "amount": 100.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0092",
+    "menu_name": "토마토 담은 주스",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0005",
+        "name": "냉동토마토",
+        "amount": 250.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 50.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0093",
+    "menu_name": "제주감귤주스",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0006",
+        "name": "냉동 감귤",
+        "amount": 250.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0094",
+    "menu_name": "우리수박주스",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0026",
+        "name": "냉동수박",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 40.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0095",
+    "menu_name": "제로슈거 레몬티",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0111",
+        "name": "제로 레몬베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0096",
+    "menu_name": "제로슈거 레몬티",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0111",
+        "name": "제로 레몬베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0097",
+    "menu_name": "제로슈거 자몽티",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0112",
+        "name": "제로 자몽베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0098",
+    "menu_name": "제로슈거 자몽티",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0112",
+        "name": "제로 자몽베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0099",
+    "menu_name": "딸기복숭아 루이보스티",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0114",
+        "name": "딸기 피치 루이보스티",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0130",
+        "name": "딸기베이스",
+        "amount": 50.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0131",
+        "name": "딸기소스",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0115",
+        "name": "동결건조 딸기 다이스",
+        "amount": 1.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0100",
+    "menu_name": "에어폼아메리카노",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0101",
+    "menu_name": "율무라떼",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0116",
+        "name": "율무차파우더",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0011",
+        "name": "현미크런치",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0102",
+    "menu_name": "율무라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0116",
+        "name": "율무차파우더",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0011",
+        "name": "현미크런치",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0103",
+    "menu_name": "율무아몬드라떼",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0116",
+        "name": "율무차파우더",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0117",
+        "name": "아몬드브리즈",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0011",
+        "name": "현미크런치",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0104",
+    "menu_name": "율무아몬드라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0116",
+        "name": "율무차파우더",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0117",
+        "name": "아몬드브리즈",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0011",
+        "name": "현미크런치",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0105",
+    "menu_name": "생강차",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0118",
+        "name": "생강차베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0106",
+    "menu_name": "생강차",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0118",
+        "name": "생강차베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0127",
+        "name": "냉동 레몬슬라이스",
+        "amount": 10.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0107",
+    "menu_name": "생크림 아메리카노",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0108",
+    "menu_name": "생크림 카페라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0109",
+    "menu_name": "피스타치오생크림 카페라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0106",
+        "name": "피스타치오 파우더",
+        "amount": 15.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0110",
+    "menu_name": "피스타치오생크림 초코라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0106",
+        "name": "피스타치오 파우더",
+        "amount": 15.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 225.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0049",
+        "name": "초코소스",
+        "amount": 60.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0111",
+    "menu_name": "우베라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0079",
+        "name": "리얼베이스 우베",
+        "amount": 60.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0112",
+    "menu_name": "아이스크림 우베라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0079",
+        "name": "리얼베이스 우베",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0132",
+        "name": "아이스크림",
+        "amount": 120.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0113",
+    "menu_name": "생크림 우베라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0079",
+        "name": "리얼베이스 우베",
+        "amount": 60.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0114",
+    "menu_name": "원조커피크림 라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0063",
+        "name": "원조커피 원액",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0115",
+    "menu_name": "원조커피크림 미숫가루",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0099",
+        "name": "생크림",
+        "amount": 75.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0063",
+        "name": "원조커피 원액",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0041",
+        "name": "빽다방 옛날미숫가루",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0116",
+    "menu_name": "피스타치오 빽스치노",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0106",
+        "name": "피스타치오 파우더",
+        "amount": 105.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0031",
+        "name": "도블라 컬스 미니 다크 초콜릿",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0117",
+    "menu_name": "통단팥율무쉐이크",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0116",
+        "name": "율무차파우더",
+        "amount": 72.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0119",
+        "name": "단팥",
+        "amount": 120.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0120",
+        "name": "인절미떡",
+        "amount": 15.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0118",
+    "menu_name": "통단팥쉐이크",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0119",
+        "name": "단팥",
+        "amount": 150.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0120",
+        "name": "인절미떡",
+        "amount": 15.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0085",
+        "name": "매일 연유",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0119",
+    "menu_name": "통단팥컵빙",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0085",
+        "name": "매일 연유",
+        "amount": 15.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0119",
+        "name": "단팥",
+        "amount": 120.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0041",
+        "name": "빽다방 옛날미숫가루",
+        "amount": 8.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0120",
+        "name": "인절미떡",
+        "amount": 30.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0120",
+    "menu_name": "망고 컵빙수",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0125",
+        "name": "베버시티 망고베이스",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0004",
+        "name": "냉동 망고 1kg(솜)",
+        "amount": 100.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0060",
+        "name": "나타드코코",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0096",
+        "name": "크래프트 큐브 치즈케익",
+        "amount": 16.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0085",
+        "name": "매일 연유",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0121",
+    "menu_name": "블루베리 컵빙수",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0121",
+        "name": "블루베리 굿플잼",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0007",
+        "name": "빽쿡 냉동블루베리",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0060",
+        "name": "나타드코코",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0096",
+        "name": "크래프트 큐브 치즈케익",
+        "amount": 16.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0085",
+        "name": "매일 연유",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0122",
+    "menu_name": "초코 컵빙수",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 50.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0049",
+        "name": "초코소스",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0085",
+        "name": "매일 연유",
+        "amount": 25.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0122",
+        "name": "초코볼",
+        "amount": 12.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0094",
+        "name": "초코쉘",
+        "amount": 5.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0011",
+        "name": "당코팅 현미크런치",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0033",
+        "name": "초코브라우니",
+        "amount": 11.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0031",
+        "name": "도블라 컬스 미니 다크 초콜릿",
+        "amount": 5.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0096",
+        "name": "크래프트 큐브 치즈케익",
+        "amount": 16.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0123",
+    "menu_name": "냥냥! 춘배펀치 딸기스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0042",
+        "name": "빽다방 밀크파우더",
+        "amount": 16.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0131",
+        "name": "딸기소스",
+        "amount": 30.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0130",
+        "name": "딸기베이스",
+        "amount": 80.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0048",
+        "name": "휘핑크림",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0115",
+        "name": "동결건조 딸기 다이스",
+        "amount": 1.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0124",
+        "name": "발바닥 사인판",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0124",
+    "menu_name": "냥냥! 춘배펀치 초코스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0042",
+        "name": "빽다방 밀크파우더",
+        "amount": 16.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0019",
+        "name": "시럽",
+        "amount": 10.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0049",
+        "name": "초코소스",
+        "amount": 40.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0123",
+        "name": "코코볼",
+        "amount": 18.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0048",
+        "name": "휘핑크림",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0123",
+        "name": "초코볼 토핑용",
+        "amount": 1.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0124",
+        "name": "발바닥 사인판",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0125",
+    "menu_name": "자두스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0109",
+        "name": "자두샤베트파우더",
+        "amount": 68.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0126",
+    "menu_name": "청사과스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0110",
+        "name": "애플샤베트파우더",
+        "amount": 68.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0127",
+    "menu_name": "코코넛 커피스무디",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0107",
+        "name": "코코넛파우더",
+        "amount": 60.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0108",
+        "name": "코코넛칩",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0128",
+    "menu_name": "코코넛 카페라떼",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0107",
+        "name": "코코넛파우더",
+        "amount": 36.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0108",
+        "name": "코코넛칩",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0129",
+    "menu_name": "코코넛 카페라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0107",
+        "name": "코코넛파우더",
+        "amount": 36.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0045",
+        "name": "원두",
+        "amount": 18.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0108",
+        "name": "코코넛칩",
+        "amount": 5.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0130",
+    "menu_name": "민트초코라떼",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0126",
+        "name": "민트초코파우더",
+        "amount": 75.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0131",
+    "menu_name": "민트초코라떼",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0126",
+        "name": "민트초코파우더",
+        "amount": 75.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 250.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0132",
+    "menu_name": "민트초코 빽스치노",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0046",
+        "name": "우유",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0126",
+        "name": "민트초코파우더",
+        "amount": 105.0,
+        "unit": "g"
       }
     ]
   }

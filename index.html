@@ -442,15 +442,21 @@
 
             <!-- Recipe View Section (hidden by default) -->
             <div id="recipe-view" style="display: none; flex-direction: column; gap: 20px; height: 100%;">
-                <div class="page-header" style="margin-bottom: 0;">
+                <div class="page-header" style="margin-bottom: 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
                     <div>
                         <h2 class="page-title">레시피 매뉴얼 관리</h2>
                         <p class="page-sub">빽다방 공식 표준 레시피 가이드 및 재고 소모 계산 매뉴얼입니다.</p>
                     </div>
+                    <!-- Recipe Tab Switcher -->
+                    <div style="display: flex; background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 20px; padding: 4px; gap: 4px;">
+                        <button id="recipe-btn-always" style="border: none; background: var(--primary); color: #000; font-weight: 700; padding: 6px 16px; border-radius: 16px; cursor: pointer; transition: all 0.2s;">상시 메뉴</button>
+                        <button id="recipe-btn-season" style="border: none; background: transparent; color: var(--text-muted); font-weight: 700; padding: 6px 16px; border-radius: 16px; cursor: pointer; transition: all 0.2s;">시즌 메뉴</button>
+                    </div>
                 </div>
                 
                 <div class="bento-card" style="flex: 1; min-height: 700px; padding: 12px; display: flex; flex-direction: column;">
-                    <iframe src="recipe/recipe.pdf" 
+                    <iframe id="recipe-iframe" 
+                            src="recipe/recipe.pdf" 
                             width="100%" 
                             height="750px" 
                             style="border: 1px solid var(--border-color); border-radius: var(--border-radius-md); flex: 1;">

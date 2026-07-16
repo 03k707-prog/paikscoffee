@@ -240,6 +240,28 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 레시피 매뉴얼 상시 vs 시즌 토글 전환 기능 바인딩
+    const btnAlways = document.getElementById('recipe-btn-always');
+    const btnSeason = document.getElementById('recipe-btn-season');
+    const recipeIframe = document.getElementById('recipe-iframe');
+    
+    if (btnAlways && btnSeason && recipeIframe) {
+        btnAlways.addEventListener('click', () => {
+            btnAlways.style.background = 'var(--primary)';
+            btnAlways.style.color = '#000';
+            btnSeason.style.background = 'transparent';
+            btnSeason.style.color = 'var(--text-muted)';
+            recipeIframe.src = 'recipe/recipe.pdf';
+        });
+        btnSeason.addEventListener('click', () => {
+            btnSeason.style.background = 'var(--primary)';
+            btnSeason.style.color = '#000';
+            btnAlways.style.background = 'transparent';
+            btnAlways.style.color = 'var(--text-muted)';
+            recipeIframe.src = 'recipe/recipe_season.pdf';
+        });
+    }
+
     if (navSales) {
         navSales.addEventListener('click', (e) => {
             e.preventDefault();
