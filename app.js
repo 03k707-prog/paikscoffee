@@ -431,14 +431,26 @@ document.addEventListener('DOMContentLoaded', () => {
         renderChannelDonutChart();
 
         // 5) 일별 매출 테이블 주입 및 필터링 바인딩
-        renderSalesTable('ALL');
-        
-        // 필터 변경 시 이벤트 재연동
+        const now = new Date();
+        const currentYear = now.getFullYear();
+        const currentMonth = String(now.getMonth() + 1).padStart(2, '0');
+        const defaultMonthKey = `${currentYear}-${currentMonth}`; // 예: "2026-07"
+
         const monthFilter = document.getElementById('sales-month-filter');
         if (monthFilter) {
+            const hasOption = Array.from(monthFilter.options).some(opt => opt.value === defaultMonthKey);
+            if (hasOption) {
+                monthFilter.value = defaultMonthKey;
+            } else {
+                monthFilter.value = monthFilter.options[0].value;
+            }
+            renderSalesTable(monthFilter.value);
+            
             monthFilter.onchange = () => {
                 renderSalesTable(monthFilter.value);
             };
+        } else {
+            renderSalesTable('ALL');
         }
 
         // 6) 월간 상품별 판매 랭킹 테이블 렌더링 및 필터링 바인딩
