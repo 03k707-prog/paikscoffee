@@ -559,6 +559,43 @@
                             </tbody>
                         </table>
                     </div>
+                <!-- Monthly Product Sales Ranking Card -->
+                <div class="table-card" style="margin-top: 24px;">
+                    <div class="table-header">
+                        <h4 class="table-header-title">월간 상품별 판매 랭킹 (7월 누적)</h4>
+                        <div class="table-actions">
+                            <select class="table-select" id="product-category-filter">
+                                <option value="ALL">전체 카테고리</option>
+                                <option value="커피">커피</option>
+                                <option value="음료">음료</option>
+                                <option value="주스 / 에이드">주스 / 에이드</option>
+                                <option value="스무디 / 쉐이크">스무디 / 쉐이크</option>
+                                <option value="차 / 흑당버블">차 / 흑당버블</option>
+                                <option value="디저트">디저트</option>
+                                <option value="기타">기타</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="table-container" style="max-height: 480px; overflow-y: auto;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; width: 60px;">순위</th>
+                                    <th>카테고리</th>
+                                    <th>상품명</th>
+                                    <th style="text-align: right; width: 100px;">판매 수량</th>
+                                    <th style="text-align: right; width: 130px;">매출 합계</th>
+                                    <th style="text-align: center; width: 100px;">내점</th>
+                                    <th style="text-align: center; width: 100px;">포장</th>
+                                    <th style="text-align: center; width: 100px;">배달</th>
+                                </tr>
+                            </thead>
+                            <tbody id="product-sales-table-body">
+                                <!-- Dynamic entries injected here -->
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -579,6 +616,7 @@
 <!-- Load scripts in order -->
 <script src="data.js"></script>
 <script src="income_data.js"></script>
+<script src="product_sales_data.js"></script>
 <script src="app.js"></script>
 
 </body>

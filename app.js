@@ -440,6 +440,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSalesTable(monthFilter.value);
             };
         }
+
+        // 6) 월간 상품별 판매 랭킹 테이블 렌더링 및 필터링 바인딩
+        renderProductSalesTable('ALL');
+        const productCategoryFilter = document.getElementById('product-category-filter');
+        if (productCategoryFilter) {
+            productCategoryFilter.onchange = () => {
+                renderProductSalesTable(productCategoryFilter.value);
+            };
+        }
     }
 
     // 일별 매출 추이 차트 렌더링 (SVG)
@@ -878,6 +887,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (sorted.length === 0) {
             body.innerHTML = `<tr><td colspan="7" style="text-align: center; color: var(--text-muted); padding: 32px;">데이터가 존재하지 않습니다.</td></tr> animate-fade-in`;
+        }
+    }
+
+    // 월간 상품별 판매 랭킹 테이블 렌더링
+    function renderProductSalesTable(categoryFilter = 'ALL') {
+        const body = document.getElementById('product-sales-table-body');
+        if (!body) return;
+        
+        body.innerHTML = '';
+        
+        // Filter records
+        let filtered = PRODUCT_SALES_RECORD;
+        if (categoryFilter !== 'ALL') {
+            filtered = PRODUCT_SALES_RECORD.filter(r => r.category === categoryFilter);
+        }
+        
+        // Sort by rank ascending
+        const sorted = [...filtered].sort((a, b) => a.rank - b.rank);
+        
+        sorted.forEach(r => {
+            const tr = document.createElement('tr');
+            
+            // Calculate ratios for 내점, 포장, 배달
+            const total = r.dine_in + r.take_out + r.delivery;
+            let dinePct = '0%';
+            let takePct = '0%';
+            let deliPct = '0%';
+            
+            if (total > 0) {
+                dinePct = `${Math.round((r.dine_in / total) * 100)}%`;
+                takePct = `${Math.round((r.take_out / total) * 100)}%`;
+                deliPct = `${Math.round((r.delivery / total) * 100)}%`;
+            }
+            
+            tr.innerHTML = `
+                <td style="text-align: center; font-weight: 700; color: ${r.rank <= 3 ? 'var(--secondary)' : 'var(--text-color)'};">
+                    ${r.rank}
+                </td>
+                <td style="color: var(--text-muted); font-size: 11px;">${r.category}</td>
+                <td style="font-weight: 600;">${r.name}</td>
+                <td style="text-align: right; font-weight: 700;">${r.qty.toLocaleString()} 잔</td>
+                <td style="text-align: right; color: var(--success); font-weight: 700;">${r.total_sales.toLocaleString()}원</td>
+                <td style="text-align: center; font-size: 11px; color: var(--text-muted);">${dinePct}</td>
+                <td style="text-align: center; font-size: 11px; color: var(--text-muted);">${takePct}</td>
+                <td style="text-align: center; font-size: 11px; color: var(--text-muted);">${deliPct}</td>
+            `;
+            body.appendChild(tr);
+        });
+        
+        if (sorted.length === 0) {
+            body.innerHTML = `<tr><td colspan="8" style="text-align: center; color: var(--text-muted); padding: 32px;">데이터가 존재하지 않습니다.</td></tr>`;
         }
     }
 
