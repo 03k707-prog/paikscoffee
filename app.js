@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 renderSalesTable(monthFilter.value);
             };
         } else {
-            renderSalesTable('ALL');
+            renderSalesTable('2026-07');
         }
 
         // 6) 월간 상품별 판매 랭킹 테이블 렌더링 및 필터링 바인딩
@@ -869,8 +869,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         body.innerHTML = "";
 
+        const filterVal = (monthFilter && monthFilter !== 'ALL') ? monthFilter : '2026-07';
         const filtered = INCOME_DAILY_RECORDS.filter(r => {
-            return monthFilter === 'ALL' || r.date.startsWith(monthFilter);
+            return r.date.startsWith(filterVal);
         });
 
         const sorted = [...filtered].reverse();
