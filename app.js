@@ -147,9 +147,38 @@ document.addEventListener('DOMContentLoaded', () => {
         recipe.ingredients.forEach(ing => {
             const item = currentInventory.find(i => i.품목ID === ing.item_id);
             if (item) {
-                const totalDeducted = ing.amount * salesQty;
+                let unitAmount = ing.amount;
+                
+                // 패키지 단위 보정 (단위가 g 또는 ml 이고, DB의 품목 단위가 EA/BOX/팩 등 포장 단위인 경우)
+                if ((ing.unit === 'g' || ing.unit === 'ml') && (item.단위 !== 'g' && item.단위 !== 'ml')) {
+                    let packSize = 1000; // 기본 디폴트 1000
+                    const spec = (item.규격 || "").toUpperCase();
+                    
+                    // 곱 연산 규격 처리 (예: "1KG*6팩" -> 6000, "1L*16EA" -> 16000)
+                    const multiplyMatch = spec.match(/(\d+(?:\.\d+)?)\s*(KG|L|G|ML)\s*\*\s*(\d+)/);
+                    if (multiplyMatch) {
+                        let size = parseFloat(multiplyMatch[1]);
+                        let unit = multiplyMatch[2];
+                        let count = parseInt(multiplyMatch[3], 10);
+                        let baseSize = (unit === 'KG' || unit === 'L') ? size * 1000 : size;
+                        packSize = baseSize * count;
+                    } else {
+                        // 단일 규격 처리 (예: "1KG", "550G")
+                        const singleMatch = spec.match(/(\d+(?:\.\d+)?)\s*(KG|L|G|ML)/);
+                        if (singleMatch) {
+                            let size = parseFloat(singleMatch[1]);
+                            let unit = singleMatch[2];
+                            packSize = (unit === 'KG' || unit === 'L') ? size * 1000 : size;
+                        }
+                    }
+                    unitAmount = ing.amount / packSize;
+                }
+                
+                const totalDeducted = unitAmount * salesQty;
                 item.current_qty = Math.max(item.current_qty - totalDeducted, 0); // 재고 차감 (0 이하 예방)
-                deductedList.push(`${item.품목명} ${totalDeducted.toFixed(1)}${ing.unit}`);
+                
+                const formattedDeducted = totalDeducted >= 1 ? totalDeducted.toFixed(1) : totalDeducted.toFixed(3);
+                deductedList.push(`${item.품목명} ${formattedDeducted}${item.단위}`);
             }
         });
 

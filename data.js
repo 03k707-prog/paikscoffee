@@ -1592,8 +1592,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1691,8 +1691,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1722,8 +1722,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1759,8 +1759,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1796,8 +1796,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1839,8 +1839,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1876,8 +1876,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1919,8 +1919,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -1931,8 +1931,8 @@ const RECIPES = [
         "unit": "ml"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -1962,14 +1962,14 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2005,8 +2005,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 225.0,
         "unit": "ml"
       },
@@ -2042,8 +2042,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2054,8 +2054,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2085,8 +2085,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2097,8 +2097,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2134,8 +2134,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2146,8 +2146,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2177,8 +2177,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2189,8 +2189,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2226,8 +2226,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2238,8 +2238,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2275,8 +2275,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2287,8 +2287,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2330,8 +2330,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2342,8 +2342,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2373,8 +2373,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2385,8 +2385,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2422,8 +2422,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2434,8 +2434,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 225.0,
         "unit": "ml"
       },
@@ -2465,8 +2465,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -2477,8 +2477,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 225.0,
         "unit": "ml"
       },
@@ -2514,8 +2514,8 @@ const RECIPES = [
     "temperature": "HOT",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2557,8 +2557,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2606,8 +2606,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2643,8 +2643,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2686,8 +2686,8 @@ const RECIPES = [
         "unit": "ml"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2723,8 +2723,8 @@ const RECIPES = [
         "unit": "ml"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -2852,8 +2852,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -3166,9 +3166,9 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 9.25,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       },
       {
@@ -3923,8 +3923,8 @@ const RECIPES = [
         "unit": "봉"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -3972,15 +3972,15 @@ const RECIPES = [
         "unit": "봉"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 9.25,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       },
       {
@@ -4039,8 +4039,8 @@ const RECIPES = [
         "unit": "ml"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 150.0,
         "unit": "ml"
       },
@@ -4076,8 +4076,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -4131,8 +4131,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -4174,8 +4174,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -4229,8 +4229,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -4272,9 +4272,9 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 37.0,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       },
       {
@@ -4309,15 +4309,15 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 375.0,
         "unit": "ml"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 37.0,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       },
       {
@@ -4352,8 +4352,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 375.0,
         "unit": "ml"
       },
@@ -4364,9 +4364,9 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 37.0,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       },
       {
@@ -4481,8 +4481,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -4518,8 +4518,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 375.0,
         "unit": "ml"
       },
@@ -4610,8 +4610,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 300.0,
         "unit": "ml"
       },
@@ -4690,8 +4690,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -4715,8 +4715,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 150.0,
         "unit": "ml"
       },
@@ -4976,9 +4976,9 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 9.25,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       }
     ]
@@ -5033,9 +5033,9 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
-        "amount": 9.25,
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
+        "amount": 18.5,
         "unit": "g"
       }
     ]
@@ -5303,8 +5303,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       }
@@ -5322,8 +5322,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -5347,8 +5347,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -5466,8 +5466,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       }
@@ -5491,14 +5491,14 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       }
@@ -5528,14 +5528,14 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       }
@@ -5565,8 +5565,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 225.0,
         "unit": "ml"
       },
@@ -5584,8 +5584,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -5603,8 +5603,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -5640,8 +5640,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -5671,8 +5671,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -5683,8 +5683,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       }
@@ -5708,8 +5708,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -5733,8 +5733,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -5758,8 +5758,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -5795,8 +5795,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 150.0,
         "unit": "ml"
       },
@@ -5832,8 +5832,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 50.0,
         "unit": "ml"
       },
@@ -5875,8 +5875,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 50.0,
         "unit": "ml"
       },
@@ -5924,8 +5924,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 50.0,
         "unit": "ml"
       },
@@ -5973,8 +5973,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 50.0,
         "unit": "ml"
       },
@@ -6040,8 +6040,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -6089,8 +6089,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -6170,8 +6170,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -6182,8 +6182,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
@@ -6207,14 +6207,14 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -6238,14 +6238,14 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0045",
-        "name": "원두",
+        "item_id": "P0098",
+        "name": "시그니처 블렌드 원두",
         "amount": 18.5,
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       },
@@ -6269,8 +6269,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       }
@@ -6288,8 +6288,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 250.0,
         "unit": "ml"
       }
@@ -6301,8 +6301,8 @@ const RECIPES = [
     "temperature": "ICED",
     "ingredients": [
       {
-        "item_id": "P0046",
-        "name": "우유",
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
         "amount": 200.0,
         "unit": "ml"
       },
@@ -6311,6 +6311,69 @@ const RECIPES = [
         "name": "민트초코파우더",
         "amount": 105.0,
         "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0133",
+    "menu_name": "사라다빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0029",
+        "name": "사라다샐러드(감자:중국산)",
+        "amount": 130.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0034",
+        "name": "핫도그빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0134",
+    "menu_name": "소세지빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0028",
+        "name": "소세지빵용샐러드",
+        "amount": 55.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0097",
+        "name": "서울우유 펠렛치즈B 1kg",
+        "amount": 20.0,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0089",
+        "name": "보스턴핫(소시지)",
+        "amount": 1.0,
+        "unit": "EA"
+      },
+      {
+        "item_id": "P0034",
+        "name": "핫도그빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0135",
+    "menu_name": "빽그램핫도그",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0035",
+        "name": "빽그램 핫도그",
+        "amount": 1.0,
+        "unit": "EA"
       }
     ]
   }
