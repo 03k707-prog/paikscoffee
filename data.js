@@ -1583,6 +1583,138 @@ const INITIAL_ITEMS = [
     "current_qty": 50.0,
     "safety_qty": 15.0,
     "category": "기타자재"
+  },
+  {
+    "품목ID": "P0133",
+    "품목명": "고메버터 소금빵",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1800,
+    "과세구분": "과세",
+    "원본품목명": "고메버터 소금빵 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0134",
+    "품목명": "크룽지",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1500,
+    "과세구분": "과세",
+    "원본품목명": "크룽지 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0135",
+    "품목명": "긴페스츄리와플",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1600,
+    "과세구분": "과세",
+    "원본품목명": "긴페스츄리와플 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0136",
+    "품목명": "쫀득 감자빵",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1500,
+    "과세구분": "과세",
+    "원본품목명": "쫀득 감자빵 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0137",
+    "품목명": "쫀득 고구마빵",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1500,
+    "과세구분": "과세",
+    "원본품목명": "쫀득 고구마빵 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0138",
+    "품목명": "크리미슈",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1000,
+    "과세구분": "과세",
+    "원본품목명": "크리미슈 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0139",
+    "품목명": "커스터드홀릭 바움쿠헨",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1800,
+    "과세구분": "과세",
+    "원본품목명": "커스터드홀릭 바움쿠헨 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0140",
+    "품목명": "초코홀릭 바움쿠헨",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1800,
+    "과세구분": "과세",
+    "원본품목명": "초코홀릭 바움쿠헨 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0141",
+    "품목명": "치즈홀릭 바움쿠헨",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1800,
+    "과세구분": "과세",
+    "원본품목명": "치즈홀릭 바움쿠헨 [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
+  },
+  {
+    "품목ID": "P0142",
+    "품목명": "마카롱(순우유)",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1200,
+    "과세구분": "과세",
+    "원본품목명": "마카롱(순우유) [1EA]",
+    "current_qty": 30.0,
+    "safety_qty": 10.0,
+    "category": "유제품"
+  },
+  {
+    "품목ID": "P0143",
+    "품목명": "마카롱(초코크런치)",
+    "규격": "1EA",
+    "단위": "EA",
+    "단가": 1200,
+    "과세구분": "과세",
+    "원본품목명": "마카롱(초코크런치) [1EA]",
+    "current_qty": 50.0,
+    "safety_qty": 15.0,
+    "category": "기타자재"
   }
 ];
 const RECIPES = [
@@ -2428,8 +2560,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0047",
-        "name": "연유",
+        "item_id": "P0085",
+        "name": "서울우유 연유 500g",
         "amount": 70.0,
         "unit": "g"
       },
@@ -2471,8 +2603,8 @@ const RECIPES = [
         "unit": "g"
       },
       {
-        "item_id": "P0047",
-        "name": "연유",
+        "item_id": "P0085",
+        "name": "서울우유 연유 500g",
         "amount": 70.0,
         "unit": "g"
       },
@@ -3119,7 +3251,7 @@ const RECIPES = [
   },
   {
     "id": "R0038",
-    "menu_name": "복숭아 아이스티",
+    "menu_name": "복숭아 아이스티(ICED)",
     "temperature": "ICED",
     "ingredients": [
       {
@@ -3156,7 +3288,7 @@ const RECIPES = [
   },
   {
     "id": "R0039",
-    "menu_name": "아이스티 샷 추가 (아샷추)",
+    "menu_name": "아이스티 샷추가(아.샷.추)",
     "temperature": "ICED",
     "ingredients": [
       {
@@ -4434,7 +4566,7 @@ const RECIPES = [
   },
   {
     "id": "R0069",
-    "menu_name": "복숭아 아이스티 (32oz)",
+    "menu_name": "빽사이즈 복숭아아이스티(ICED)",
     "temperature": "ICED",
     "ingredients": [
       {
@@ -4471,7 +4603,7 @@ const RECIPES = [
   },
   {
     "id": "R0070",
-    "menu_name": "아이스티 샷추가 (아샷추) (32oz)",
+    "menu_name": "빽사이즈 아이스티 샷추가(아.샷.추)",
     "temperature": "ICED",
     "ingredients": [
       {
@@ -5820,8 +5952,8 @@ const RECIPES = [
       },
       {
         "item_id": "P0085",
-        "name": "매일 연유",
-        "amount": 5.0,
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
         "unit": "g"
       }
     ]
@@ -5839,8 +5971,8 @@ const RECIPES = [
       },
       {
         "item_id": "P0085",
-        "name": "매일 연유",
-        "amount": 15.0,
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
         "unit": "g"
       },
       {
@@ -5912,8 +6044,8 @@ const RECIPES = [
       },
       {
         "item_id": "P0085",
-        "name": "매일 연유",
-        "amount": 5.0,
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
         "unit": "g"
       }
     ]
@@ -5961,8 +6093,8 @@ const RECIPES = [
       },
       {
         "item_id": "P0085",
-        "name": "매일 연유",
-        "amount": 5.0,
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
         "unit": "g"
       }
     ]
@@ -5986,8 +6118,8 @@ const RECIPES = [
       },
       {
         "item_id": "P0085",
-        "name": "매일 연유",
-        "amount": 25.0,
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
         "unit": "g"
       },
       {
@@ -6374,6 +6506,676 @@ const RECIPES = [
         "name": "빽그램 핫도그",
         "amount": 1.0,
         "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0136",
+    "menu_name": "고메버터 소금빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0133",
+        "name": "고메버터 소금빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0137",
+    "menu_name": "크룽지",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0134",
+        "name": "크룽지",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0138",
+    "menu_name": "긴페스츄리와플",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0135",
+        "name": "긴페스츄리와플",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0139",
+    "menu_name": "쫀득 감자빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0136",
+        "name": "쫀득 감자빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0140",
+    "menu_name": "쫀득 고구마빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0137",
+        "name": "쫀득 고구마빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0141",
+    "menu_name": "크리미슈",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0138",
+        "name": "크리미슈",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0142",
+    "menu_name": "커스터드홀릭 바움쿠헨",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0139",
+        "name": "커스터드홀릭 바움쿠헨",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0143",
+    "menu_name": "초코홀릭 바움쿠헨",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0140",
+        "name": "초코홀릭 바움쿠헨",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0144",
+    "menu_name": "치즈홀릭 바움쿠헨",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0141",
+        "name": "치즈홀릭 바움쿠헨",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0145",
+    "menu_name": "마카롱(순우유)",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0142",
+        "name": "마카롱(순우유)",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0146",
+    "menu_name": "마카롱(초코크런치)",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0143",
+        "name": "마카롱(초코크런치)",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0147",
+    "menu_name": "크리미단팥빵",
+    "temperature": "FOOD",
+    "ingredients": [
+      {
+        "item_id": "P0043",
+        "name": "크리미단팥빵",
+        "amount": 1.0,
+        "unit": "EA"
+      }
+    ]
+  },
+  {
+    "id": "R0148",
+    "menu_name": "요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0149",
+    "menu_name": "[행사]요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0150",
+    "menu_name": "깨먹는 크런키 초코 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0151",
+    "menu_name": "꿀초링 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0152",
+    "menu_name": "초코브라우니 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0153",
+    "menu_name": "블루베리치즈 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0154",
+    "menu_name": "딸기콕콕 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0155",
+    "menu_name": "말차 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0156",
+    "menu_name": "우베 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0157",
+    "menu_name": "[행사]초코브라우니 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0158",
+    "menu_name": "[행사] 꿀초링 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0159",
+    "menu_name": "[행사]깨먹는 크런키 초코요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0160",
+    "menu_name": "[행사] 망고치즈 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0161",
+    "menu_name": "[행사] 블루베리치즈 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0162",
+    "menu_name": "[행사]딸기콕콕 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0163",
+    "menu_name": "[행사]우베 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0164",
+    "menu_name": "[행사]말차 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0165",
+    "menu_name": "[행사]말차쿠키 요거트 아이스크림",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0017",
+        "name": "빽다방 요거트파우더",
+        "amount": 55.5,
+        "unit": "g"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 166.67,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0166",
+    "menu_name": "디카페인 콜드브루(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0024",
+        "name": "빽다방 콜드브루 디카페인 커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0167",
+    "menu_name": "디카페인 콜드브루(HOT)",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0024",
+        "name": "빽다방 콜드브루 디카페인 커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0168",
+    "menu_name": "디카페인 콜드브루라떼(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0024",
+        "name": "빽다방 콜드브루 디카페인 커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 200.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0169",
+    "menu_name": "디카페인 콜드브루라떼(HOT)",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0024",
+        "name": "빽다방 콜드브루 디카페인 커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 200.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0170",
+    "menu_name": "디카페인 콜드브루 연유라떼 (ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0024",
+        "name": "빽다방 콜드브루 디카페인 커피원액",
+        "amount": 40.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 150.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0085",
+        "name": "서울우유 연유 500g",
+        "amount": 70.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0171",
+    "menu_name": "콜드브루(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0036",
+        "name": "빽다방 콜드브루 오리지널 커피원액",
+        "amount": 25.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0172",
+    "menu_name": "콜드브루라떼(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0036",
+        "name": "빽다방 콜드브루 오리지널 커피원액",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 200.0,
+        "unit": "ml"
+      }
+    ]
+  },
+  {
+    "id": "R0173",
+    "menu_name": "콜드브루 흑당라떼(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0036",
+        "name": "빽다방 콜드브루 오리지널 커피원액",
+        "amount": 25.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0100",
+        "name": "서울우유 바리스타밀크 1L",
+        "amount": 200.0,
+        "unit": "ml"
+      },
+      {
+        "item_id": "P0062",
+        "name": "흑당시럽",
+        "amount": 30.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0174",
+    "menu_name": "쌍화차(HOT)",
+    "temperature": "HOT",
+    "ingredients": [
+      {
+        "item_id": "P0059",
+        "name": "쌍화차파우더",
+        "amount": 45.0,
+        "unit": "g"
+      }
+    ]
+  },
+  {
+    "id": "R0175",
+    "menu_name": "쌍화차(ICED)",
+    "temperature": "ICED",
+    "ingredients": [
+      {
+        "item_id": "P0059",
+        "name": "쌍화차파우더",
+        "amount": 60.0,
+        "unit": "g"
       }
     ]
   }
