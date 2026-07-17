@@ -6,6 +6,31 @@ document.addEventListener('DOMContentLoaded', () => {
     let totalSalesAccumulated = 1250000; // 초기 판매액 누적
     let totalOrdersAccumulated = 12;
     
+    // 최근 30일 데이터 추출 헬퍼 함수
+    function getLast30DaysRecords() {
+        if (typeof INCOME_DAILY_RECORDS === 'undefined') return [];
+        const now = new Date();
+        const endDate = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        const startDate = new Date(endDate);
+        startDate.setDate(startDate.getDate() - 29);
+        
+        const formatDate = (d) => {
+            const year = d.getFullYear();
+            const month = String(d.getMonth() + 1).padStart(2, '0');
+            const day = String(d.getDate()).padStart(2, '0');
+            return `${year}-${month}-${day}`;
+        };
+        
+        const startStr = formatDate(startDate);
+        const endStr = formatDate(endDate);
+        
+        let filtered = INCOME_DAILY_RECORDS.filter(r => r.date >= startStr && r.date <= endStr);
+        if (filtered.length < 5) {
+            filtered = INCOME_DAILY_RECORDS.slice(-30);
+        }
+        return filtered;
+    }
+    
     // UI 요소 캐싱
     const tableBody = document.getElementById('inventory-table-body');
     const searchInput = document.getElementById('inventory-search');
@@ -468,8 +493,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = document.getElementById('trend-chart-box');
         if (!box) return;
 
-        const data = INCOME_DAILY_RECORDS;
+        const data = getLast30DaysRecords();
+        if (data.length === 0) return;
         const maxSales = Math.max(...data.map(r => r.total_sales));
+
+        // 타이틀 동적 업데이트 (조회일자 기준 최근 30일 표기)
+        const titleEl = document.getElementById('sales-trend-title');
+        if (titleEl) {
+            const firstDate = data[0].date;
+            const lastDate = data[data.length - 1].date;
+            const formatTitleDate = (dateStr) => {
+                const parts = dateStr.split('-');
+                return parts.length === 3 ? `${parseInt(parts[1], 10)}월 ${parseInt(parts[2], 10)}일` : dateStr;
+            };
+            titleEl.textContent = `일별 매출 추이 (${formatTitleDate(firstDate)} ~ ${formatTitleDate(lastDate)})`;
+        }
         
         // SVG 사이즈 설정
         const width = box.clientWidth || 800;
@@ -622,7 +660,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const box = document.getElementById('channel-trend-chart-box');
         if (!box) return;
 
-        const data = INCOME_DAILY_RECORDS;
+        const data = getLast30DaysRecords();
+        if (data.length === 0) return;
         
         // 홀매출, 배민배달, 배민픽업, 쿠팡이츠 4개 채널의 개별선으로 시각화
         const maxVal = Math.max(...data.map(r => Math.max(r.hall_sales, r.baemin_delivery, r.baemin_pickup, r.coupang_eats)));
